@@ -11,9 +11,9 @@
 [ext_resource path="res://art/Objetos/tree2.png" type="Texture" id=9]
 [ext_resource path="res://art/Objetos/tree1.png" type="Texture" id=10]
 [ext_resource path="res://art/Objetos/sign.png" type="Texture" id=11]
-[ext_resource path="res://scenes/StaticBody2D.tscn" type="PackedScene" id=12]
-[ext_resource path="res://art/cenario/black-screen.png" type="Texture" id=13]
-[ext_resource path="res://art/Objetos/well.png" type="Texture" id=14]
+[ext_resource path="res://art/Objetos/well.png" type="Texture" id=12]
+[ext_resource path="res://scenes/StaticBody2D.tscn" type="PackedScene" id=13]
+[ext_resource path="res://art/cenario/black-screen.png" type="Texture" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -44,6 +44,7 @@ texture = ExtResource( 2 )
 
 [node name="YSort" type="YSort" parent="." index="1"]
 
+editor/display_folded = true
 sort_enabled = true
 
 [node name="Player" parent="YSort" index="0" instance=ExtResource( 3 )]
@@ -126,8 +127,19 @@ texture = ExtResource( 5 )
 position = Vector2( 1641.18, 881.582 )
 texture = ExtResource( 11 )
 
-[node name="StaticBody2D" parent="." index="2" instance=ExtResource( 12 )]
+[node name="well" type="Sprite" parent="YSort" index="16"]
 
+position = Vector2( 719.845, 239.685 )
+texture = ExtResource( 12 )
+
+[node name="bush6" type="Sprite" parent="YSort" index="17"]
+
+position = Vector2( 786.504, 338.992 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" parent="." index="2" instance=ExtResource( 13 )]
+
+editor/display_folded = true
 position = Vector2( 500.665, 927.603 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
@@ -188,21 +200,10 @@ shape = SubResource( 4 )
 
 [node name="Darkness" type="Sprite" parent="." index="3"]
 
-visible = false
 light_mask = 2
 scale = Vector2( 1000, 1000 )
-texture = ExtResource( 13 )
-_sections_unfolded = [ "Transform", "Visibility" ]
-
-[node name="well" type="Sprite" parent="." index="4"]
-
-position = Vector2( 719.845, 239.685 )
 texture = ExtResource( 14 )
-
-[node name="bush" type="Sprite" parent="." index="5"]
-
-position = Vector2( 786.504, 338.992 )
-texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 
 [editable path="StaticBody2D"]
