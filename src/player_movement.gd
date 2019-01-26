@@ -19,3 +19,4 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	get_parent().move_and_slide(velocity)
+	
