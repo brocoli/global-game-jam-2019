@@ -247,8 +247,8 @@ texture = ExtResource( 8 )
 offset = Vector2( -3.05005, -28.683 )
 
 [node name="bush7" type="Sprite" parent="YSort" index="16" groups=[
-"step2",
 "step1",
+"step2",
 ]]
 
 position = Vector2( 1964.17, 910.768 )
@@ -256,8 +256,8 @@ texture = ExtResource( 8 )
 offset = Vector2( -3.05005, -28.683 )
 
 [node name="bush8" type="Sprite" parent="YSort" index="17" groups=[
-"step2",
 "step1",
+"step2",
 ]]
 
 position = Vector2( 2872.82, 892.262 )

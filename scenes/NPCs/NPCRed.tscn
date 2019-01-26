@@ -22,6 +22,4 @@ animation = "default"
 
 [node name="NPC" parent="." index="0" instance=ExtResource( 5 )]
 
-position = Vector2( 0, -1 )
-
 
