@@ -24,7 +24,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 13.9636, 10 )
 
-[node name="Player" type="KinematicBody2D" index="0" groups=[
+[node name="Player" type="KinematicBody2D" groups=[
 "player",
 ]]
 
@@ -35,26 +35,81 @@ collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
 
-[node name="PersonagemWalk" parent="." index="0" instance=ExtResource( 2 )]
+[node name="Shadow" type="ColorRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -19.0
+margin_top = -5.0
+margin_right = 19.0
+margin_bottom = 4.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 0.0497255 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Shadow2" type="ColorRect" parent="Shadow" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 32.0
+margin_top = 6.0
+margin_right = 43.0
+margin_bottom = 11.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 0.0470588 )
+
+[node name="Shadow3" type="ColorRect" parent="Shadow" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 26.0
+margin_top = 11.0
+margin_right = 29.0
+margin_bottom = 13.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 0.0470588 )
+
+[node name="PersonagemWalk" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 1.0034, -2.89555 )
 frames = SubResource( 1 )
 offset = Vector2( 20.9966, -57.1044 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Movement" type="Node" parent="." index="1"]
+[node name="Movement" type="Node" parent="." index="2"]
 
 script = ExtResource( 6 )
 movement_speed = 350
 
-[node name="Compass" parent="." index="2" instance=ExtResource( 7 )]
+[node name="Compass" parent="." index="3" instance=ExtResource( 7 )]
 
 position = Vector2( 22, -151 )
 scale = Vector2( 0.4, 0.4 )
 broken = true
 rotation_speed = 500
 
-[node name="Light2D" type="Light2D" parent="." index="3"]
+[node name="Light2D" type="Light2D" parent="." index="4"]
 
 position = Vector2( 22, -60 )
 enabled = true
@@ -88,7 +143,7 @@ wait_time = 0.2
 one_shot = false
 autostart = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="5"]
 
 position = Vector2( 0.392799, -11.8218 )
 shape = SubResource( 2 )

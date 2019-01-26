@@ -18,4 +18,5 @@ func _ready():
 func _on_Trigger2_body_entered(body):
 	if body.is_in_group("player") and body.story_index == 1:
 		body.story_index = 2
+		ProjectSettings.set_setting("rendering/environment/default_clear_color", Color(17,28,33,1))
 		get_tree().change_scene("res://scenes/FallingInWell.tscn")
