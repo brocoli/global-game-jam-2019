@@ -17,7 +17,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -67,9 +67,8 @@ editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Drag Margin", "Smoothing" ]
 
-[node name="Light2D" type="Light2D" parent="." index="4"]
+[node name="LightSource" type="Light2D" parent="." index="4"]
 
-scale = Vector2( 2, 2 )
 enabled = true
 editor_only = false
 texture = ExtResource( 7 )
