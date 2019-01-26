@@ -14,7 +14,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Personagem" type="Node2D" index="0"]
+[node name="Personagem" type="Node2D"]
 
 [node name="PersonagemWalk" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -25,7 +25,6 @@ position = Vector2( 20.8716, -15.9606 )
 position = Vector2( 17.1883, -110.496 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 2
 playing = true
 
 

@@ -4,7 +4,7 @@
 
 [node name="Background" type="Sprite" index="0"]
 
-position = Vector2( 400, 300 )
+position = Vector2( 416.819, -48.9934 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
