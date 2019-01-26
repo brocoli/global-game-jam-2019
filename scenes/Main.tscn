@@ -1,10 +1,39 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://art/cenario/cenario 1 tamanho certo.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://art/cenario/black-screen.png" type="Texture" id=4]
-[ext_resource path="res://scenes/StaticBody2D.tscn" type="PackedScene" id=5]
+[ext_resource path="res://art/Objetos/purple_house.png" type="Texture" id=4]
+[ext_resource path="res://art/Objetos/bush.png" type="Texture" id=5]
+[ext_resource path="res://art/Objetos/orange_house.png" type="Texture" id=6]
+[ext_resource path="res://art/Objetos/boxes.png" type="Texture" id=7]
+[ext_resource path="res://art/Objetos/blue_house.png" type="Texture" id=8]
+[ext_resource path="res://art/Objetos/tree2.png" type="Texture" id=9]
+[ext_resource path="res://art/Objetos/tree1.png" type="Texture" id=10]
+[ext_resource path="res://art/Objetos/sign.png" type="Texture" id=11]
+[ext_resource path="res://scenes/StaticBody2D.tscn" type="PackedScene" id=12]
+[ext_resource path="res://art/cenario/black-screen.png" type="Texture" id=13]
+[ext_resource path="res://art/Objetos/well.png" type="Texture" id=14]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 196.335, 46.6035 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 54.3887, 9.83307 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 41.1077, 448.481 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 899.193, 29.9417 )
 
 [node name="Main" type="Node" index="0"]
 
@@ -13,21 +42,167 @@
 position = Vector2( 886.673, 556.537 )
 texture = ExtResource( 2 )
 
-[node name="Player" parent="." index="1" instance=ExtResource( 3 )]
+[node name="YSort" type="YSort" parent="." index="1"]
+
+sort_enabled = true
+
+[node name="Player" parent="YSort" index="0" instance=ExtResource( 3 )]
 
 position = Vector2( 399.726, 525.948 )
 
-[node name="Darkness" type="Sprite" parent="." index="2"]
+[node name="purple_house" type="Sprite" parent="YSort" index="1"]
+
+position = Vector2( 508.162, 836.517 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="bush" type="Sprite" parent="YSort" index="2"]
+
+position = Vector2( 505.712, 962.927 )
+texture = ExtResource( 5 )
+
+[node name="orange_house" type="Sprite" parent="YSort" index="3"]
+
+position = Vector2( 1294.41, 706.605 )
+texture = ExtResource( 6 )
+
+[node name="boxes" type="Sprite" parent="YSort" index="4"]
+
+position = Vector2( 1557.61, 565.348 )
+texture = ExtResource( 7 )
+
+[node name="boxes2" type="Sprite" parent="YSort" index="5"]
+
+position = Vector2( 106.728, 511.681 )
+texture = ExtResource( 7 )
+
+[node name="boxes4" type="Sprite" parent="YSort" index="6"]
+
+position = Vector2( 3.09332, 552.394 )
+texture = ExtResource( 7 )
+
+[node name="boxes3" type="Sprite" parent="YSort" index="7"]
+
+position = Vector2( 86.3712, 583.855 )
+texture = ExtResource( 7 )
+
+[node name="bush2" type="Sprite" parent="YSort" index="8"]
+
+position = Vector2( 1507.34, 814.064 )
+texture = ExtResource( 5 )
+
+[node name="blue_house" type="Sprite" parent="YSort" index="9"]
+
+position = Vector2( 389.274, 275.055 )
+texture = ExtResource( 8 )
+
+[node name="bush3" type="Sprite" parent="YSort" index="10"]
+
+position = Vector2( 183.858, 374.362 )
+texture = ExtResource( 5 )
+
+[node name="tree2" type="Sprite" parent="YSort" index="11"]
+
+position = Vector2( 1506.14, 227.441 )
+texture = ExtResource( 9 )
+
+[node name="bush4" type="Sprite" parent="YSort" index="12"]
+
+position = Vector2( 1546.95, 355.317 )
+texture = ExtResource( 5 )
+
+[node name="tree1" type="Sprite" parent="YSort" index="13"]
+
+position = Vector2( 188.423, 822.782 )
+texture = ExtResource( 10 )
+
+[node name="bush5" type="Sprite" parent="YSort" index="14"]
+
+position = Vector2( 129.492, 965.2 )
+texture = ExtResource( 5 )
+
+[node name="sign" type="Sprite" parent="YSort" index="15"]
+
+position = Vector2( 1641.18, 881.582 )
+texture = ExtResource( 11 )
+
+[node name="StaticBody2D" parent="." index="2" instance=ExtResource( 12 )]
+
+position = Vector2( 500.665, 927.603 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+
+position = Vector2( 8, -10 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" index="1"]
+
+position = Vector2( 792.986, -133.594 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" index="2"]
+
+position = Vector2( 1055.5, -320.36 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" index="3"]
+
+position = Vector2( 213.426, -588.354 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" index="4"]
+
+position = Vector2( -395.387, -374.028 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" index="5"]
+
+position = Vector2( -499.022, -333.314 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" index="6"]
+
+position = Vector2( -415.744, -301.854 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" index="7"]
+
+position = Vector2( 1248.62, -468.24 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" index="8"]
+
+position = Vector2( -490.756, -354.997 )
+scale = Vector2( 1, 1.25969 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" index="9"]
+
+position = Vector2( 405.86, 164.529 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" index="10"]
+
+position = Vector2( 372.222, -882.451 )
+shape = SubResource( 4 )
+
+[node name="Darkness" type="Sprite" parent="." index="3"]
 
 visible = false
 light_mask = 2
 scale = Vector2( 1000, 1000 )
-texture = ExtResource( 4 )
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="StaticBody2D" parent="." index="3" instance=ExtResource( 5 )]
+[node name="well" type="Sprite" parent="." index="4"]
 
-position = Vector2( 508.191, 834.792 )
+position = Vector2( 719.845, 239.685 )
+texture = ExtResource( 14 )
+
+[node name="bush" type="Sprite" parent="." index="5"]
+
+position = Vector2( 786.504, 338.992 )
+texture = ExtResource( 5 )
 
 
 [editable path="StaticBody2D"]
