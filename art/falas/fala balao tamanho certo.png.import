@@ -1,0 +1,29 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/fala balao tamanho certo.png-7a2b34aaba6bfabad9d27d2e1b01bcfd.stex"
+
+[deps]
+
+source_file="res://art/falas/fala balao tamanho certo.png"
+dest_files=[ "res://.import/fala balao tamanho certo.png-7a2b34aaba6bfabad9d27d2e1b01bcfd.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
