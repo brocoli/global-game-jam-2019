@@ -56,7 +56,7 @@ extents = Vector2( 567.724, 210.225 )
 custom_solver_bias = 0.0
 extents = Vector2( 106.759, 119.312 )
 
-[node name="Main" type="Node" index="0"]
+[node name="Main" type="Node"]
 
 [node name="BGs" type="Node2D" parent="." index="0"]
 
@@ -92,7 +92,6 @@ texture = ExtResource( 5 )
 
 [node name="YSort" type="YSort" parent="." index="1"]
 
-editor/display_folded = true
 sort_enabled = true
 
 [node name="Player" parent="YSort" index="0" instance=ExtResource( 6 )]
@@ -124,7 +123,7 @@ drag_margin_bottom = 0.05
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
-_sections_unfolded = [ "Drag Margin", "Smoothing" ]
+_sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Smoothing" ]
 
 [node name="purple_house" type="Sprite" parent="YSort" index="1" groups=[
 "step1",
@@ -430,7 +429,7 @@ script = ExtResource( 19 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerAreas/Trigger1" index="0"]
 
-position = Vector2( 4333.3, 942.035 )
+position = Vector2( 4477.82, 942.035 )
 shape = SubResource( 5 )
 
 [node name="Trigger2" type="Area2D" parent="TriggerAreas" index="1"]

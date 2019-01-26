@@ -19,4 +19,5 @@ func _on_Trigger2_body_entered(body):
 	if body.is_in_group("player") and body.story_index == 1:
 		body.story_index = 2
 		ProjectSettings.set_setting("rendering/environment/default_clear_color", Color("ff111c21"))
+		body.get_node("Compass").crushed = true
 		get_tree().change_scene("res://scenes/FallingInWell.tscn")
