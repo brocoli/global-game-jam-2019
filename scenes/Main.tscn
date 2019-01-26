@@ -8,8 +8,7 @@
 
 [node name="Background" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 799.824, 599.962 )
-scale = Vector2( 2, 2 )
+position = Vector2( 886.673, 556.537 )
 texture = ExtResource( 2 )
 
 [node name="Player" parent="." index="1" instance=ExtResource( 3 )]
