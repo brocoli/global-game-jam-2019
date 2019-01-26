@@ -7,7 +7,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 63.9333, 62.2587 )
 
-[node name="NPC" type="Node2D"]
+[node name="NPC" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -27,8 +27,6 @@ _sections_unfolded = [ "Audio Bus", "Collision", "Material", "Transform", "Visib
 
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
-
-[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
