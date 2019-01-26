@@ -15,7 +15,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="NPCRed" type="AnimatedSprite" index="0"]
+[node name="NPCRed" type="AnimatedSprite"]
 
 frames = SubResource( 1 )
 animation = "default"

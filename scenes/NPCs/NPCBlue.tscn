@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://art/personagens extra/blue.png" type="Texture" id=1]
 [ext_resource path="res://art/personagens extra/blue 2.png" type="Texture" id=2]
 [ext_resource path="res://art/personagens extra/blue 3.png" type="Texture" id=3]
+[ext_resource path="res://scenes/NPCs/NPC.tscn" type="PackedScene" id=4]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -13,9 +14,11 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="NPCBlue" type="AnimatedSprite" index="0"]
+[node name="NPCBlue" type="AnimatedSprite"]
 
 frames = SubResource( 1 )
 animation = "default"
+
+[node name="NPC" parent="." index="0" instance=ExtResource( 4 )]
 
 

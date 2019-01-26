@@ -3,7 +3,6 @@ extends Node
 var is_following_player = false
 var playerDistX = 0
 var playerDistY = 0
-# var b = "textvar"
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
