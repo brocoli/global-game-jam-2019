@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends Node
 
 export (int) var movement_speed = 250
 
@@ -18,4 +18,4 @@ func get_input():
 
 func _physics_process(delta):
 	get_input()
-	move_and_slide(velocity)
+	get_parent().move_and_slide(velocity)
