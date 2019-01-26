@@ -49,7 +49,7 @@ extents = Vector2( 3445.92, 29.9417 )
 [sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
-extents = Vector2( 277.533, 210.225 )
+extents = Vector2( 567.724, 210.225 )
 
 [sub_resource type="RectangleShape2D" id=6]
 
@@ -390,7 +390,7 @@ script = ExtResource( 19 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerAreas/Trigger1" index="0"]
 
-position = Vector2( 4520.63, 931.782 )
+position = Vector2( 4223.3, 942.035 )
 shape = SubResource( 5 )
 
 [node name="Trigger2" type="Area2D" parent="TriggerAreas" index="1"]

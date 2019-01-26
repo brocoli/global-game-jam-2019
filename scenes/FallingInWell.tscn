@@ -20,31 +20,51 @@ animations = [ {
 } ]
 _sections_unfolded = [ "Resource" ]
 
-[node name="FallingInWell" type="Node2D" index="0"]
+[node name="FallingInWell" type="Node2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
+visible = false
 position = Vector2( 528.535, 298.789 )
 frames = SubResource( 1 )
 animation = "default"
 script = ExtResource( 4 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="AnimationTimer" type="Timer" parent="AnimatedSprite" index="0"]
 
 process_mode = 1
-wait_time = 5.0
+wait_time = 7.0
 one_shot = false
 autostart = false
 
 [node name="NextSceneTimer" type="Timer" parent="AnimatedSprite" index="1"]
 
 process_mode = 1
-wait_time = 0.5
+wait_time = 2.0
 one_shot = false
 autostart = false
+
+[node name="BlackoutTimer" type="Timer" parent="AnimatedSprite" index="2"]
+
+process_mode = 1
+wait_time = 7.5
+one_shot = false
+autostart = true
+
+[node name="BlackinTimer" type="Timer" parent="AnimatedSprite" index="3"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = true
 
 [connection signal="timeout" from="AnimatedSprite/AnimationTimer" to="AnimatedSprite" method="_on_Timer_timeout"]
 
 [connection signal="timeout" from="AnimatedSprite/NextSceneTimer" to="AnimatedSprite" method="_on_NextSceneTimer_timeout"]
+
+[connection signal="timeout" from="AnimatedSprite/BlackoutTimer" to="AnimatedSprite" method="_on_BlackoutTimer_timeout"]
+
+[connection signal="timeout" from="AnimatedSprite/BlackinTimer" to="AnimatedSprite" method="_on_BlackinTimer_timeout"]
 
 

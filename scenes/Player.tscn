@@ -23,7 +23,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 13.9636, 10 )
 
-[node name="Player" type="KinematicBody2D" groups=[
+[node name="Player" type="KinematicBody2D" index="0" groups=[
 "player",
 ]]
 
@@ -41,7 +41,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="Movement" type="Node" parent="." index="1"]
 
 script = ExtResource( 6 )
-movement_speed = 1250
+movement_speed = 350
 
 [node name="Compass" parent="." index="2" instance=ExtResource( 7 )]
 
