@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dummy-bg.png-988ba4dd78d42ae8b6564dae1aeb8498.stex"
+path="res://.import/fase 2 personagens 1.png-b48029b3772151844355261819d83c8b.stex"
 
 [deps]
 
-source_file="res://art/background/dummy-bg.png"
-dest_files=[ "res://.import/dummy-bg.png-988ba4dd78d42ae8b6564dae1aeb8498.stex" ]
+source_file="res://art/personagens extra/fase 2 personagens 1.png"
+dest_files=[ "res://.import/fase 2 personagens 1.png-b48029b3772151844355261819d83c8b.stex" ]
 
 [params]
 
