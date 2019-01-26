@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export (int) var movement_speed = 200
+export (int) var movement_speed = 250
 
 var velocity = Vector2()
 

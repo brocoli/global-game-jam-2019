@@ -15,12 +15,12 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 2 )
-movement_speed = 200
+movement_speed = 250
 
 [node name="AnimatedSprite" parent="Player" index="0" instance=ExtResource( 3 )]
 
 position = Vector2( 289.746, 229.587 )
-frame = 2
+frame = 1
 playing = true
 
 
