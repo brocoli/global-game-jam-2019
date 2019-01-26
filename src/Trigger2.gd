@@ -16,7 +16,6 @@ func _ready():
 
 
 func _on_Trigger2_body_entered(body):
-	print("bbbbbbbbbbbbbbbbbbbbbbbbbb ", body.story_index)
 	if body.is_in_group("player") and body.story_index == 1:
 		body.story_index = 2
 		get_tree().change_scene("res://scenes/FallingInWell.tscn")
