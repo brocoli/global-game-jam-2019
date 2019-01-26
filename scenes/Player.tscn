@@ -33,10 +33,13 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
 
 [node name="PersonagemWalk" parent="." index="0" instance=ExtResource( 2 )]
 
+position = Vector2( 1.0034, -2.89555 )
 frames = SubResource( 1 )
+offset = Vector2( 20.9966, -57.1044 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Movement" type="Node" parent="." index="1"]
@@ -46,13 +49,14 @@ movement_speed = 350
 
 [node name="Compass" parent="." index="2" instance=ExtResource( 7 )]
 
-position = Vector2( 0, -91 )
+position = Vector2( 22, -151 )
 scale = Vector2( 0.4, 0.4 )
 broken = true
 rotation_speed = 500
 
 [node name="Light2D" type="Light2D" parent="." index="3"]
 
+position = Vector2( 22, -60 )
 enabled = true
 editor_only = false
 texture = ExtResource( 8 )
@@ -86,7 +90,7 @@ autostart = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="4"]
 
-position = Vector2( -21.6072, 48.1782 )
+position = Vector2( 0.392799, -11.8218 )
 shape = SubResource( 2 )
 
 [connection signal="timeout" from="Light2D/Timer" to="Light2D" method="_on_Timer_timeout"]

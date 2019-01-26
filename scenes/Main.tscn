@@ -56,7 +56,7 @@ extents = Vector2( 567.724, 210.225 )
 custom_solver_bias = 0.0
 extents = Vector2( 106.759, 119.312 )
 
-[node name="Main" type="Node" index="0"]
+[node name="Main" type="Node"]
 
 [node name="BGs" type="Node2D" parent="." index="0"]
 
@@ -97,7 +97,7 @@ sort_enabled = true
 [node name="Player" parent="YSort" index="0" instance=ExtResource( 6 )]
 
 position = Vector2( 639.726, 525.948 )
-_sections_unfolded = [ "Pause" ]
+_sections_unfolded = [ "Collision", "Pause", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player" index="5"]
 
@@ -129,23 +129,26 @@ _sections_unfolded = [ "Drag Margin", "Smoothing" ]
 "step1",
 ]]
 
-position = Vector2( 508.162, 836.517 )
+position = Vector2( 508, 955.909 )
 texture = ExtResource( 7 )
+offset = Vector2( 0.161987, -122.483 )
 _sections_unfolded = [ "Offset" ]
 
 [node name="bush" type="Sprite" parent="YSort" index="2" groups=[
 "step1",
 ]]
 
-position = Vector2( 505.712, 962.927 )
+position = Vector2( 507, 994 )
 texture = ExtResource( 8 )
+offset = Vector2( -1.28799, -31.073 )
 
 [node name="orange_house" type="Sprite" parent="YSort" index="3" groups=[
 "step1",
 ]]
 
-position = Vector2( 1294.41, 706.605 )
+position = Vector2( 1300, 832 )
 texture = ExtResource( 9 )
+offset = Vector2( -5.58997, -125.395 )
 
 [node name="boxes" type="Sprite" parent="YSort" index="4" groups=[
 "step1",
@@ -158,124 +161,158 @@ texture = ExtResource( 10 )
 "step1",
 ]]
 
-position = Vector2( 1530.95, 766.301 )
+position = Vector2( 1531, 818 )
 texture = ExtResource( 10 )
+offset = Vector2( -0.0471191, -51.6987 )
 
 [node name="boxes6" type="Sprite" parent="YSort" index="6" groups=[
 "step1",
 ]]
 
-position = Vector2( 1592.47, 745.796 )
+position = Vector2( 1589, 798 )
 texture = ExtResource( 10 )
+offset = Vector2( 3.46924, -52.2041 )
 
 [node name="boxes7" type="Sprite" parent="YSort" index="7" groups=[
 "step1",
 ]]
 
-position = Vector2( 1645.78, 774.504 )
+position = Vector2( 1645, 824 )
 texture = ExtResource( 10 )
+offset = Vector2( 0.783325, -49.4965 )
 
 [node name="boxes2" type="Sprite" parent="YSort" index="8" groups=[
 "step1",
 ]]
 
-position = Vector2( 106.728, 511.681 )
+position = Vector2( 110, 562 )
 texture = ExtResource( 10 )
+offset = Vector2( -3.272, -50.319 )
 
 [node name="boxes4" type="Sprite" parent="YSort" index="9" groups=[
 "step1",
 ]]
 
-position = Vector2( 3.09332, 552.394 )
+position = Vector2( 0, 604 )
 texture = ExtResource( 10 )
+offset = Vector2( 3.09332, -51.606 )
 
 [node name="boxes3" type="Sprite" parent="YSort" index="10" groups=[
 "step1",
 ]]
 
-position = Vector2( 86.3712, 583.855 )
+position = Vector2( 83, 635 )
 texture = ExtResource( 10 )
+offset = Vector2( 3.3712, -51.145 )
 
 [node name="bush2" type="Sprite" parent="YSort" index="11" groups=[
 "step1",
 ]]
 
-position = Vector2( 1507.34, 814.064 )
+position = Vector2( 1509, 845 )
 texture = ExtResource( 8 )
+offset = Vector2( -1.66003, -30.936 )
 
 [node name="blue_house" type="Sprite" parent="YSort" index="12" groups=[
 "step1",
 ]]
 
-position = Vector2( 389.274, 275.055 )
+position = Vector2( 397, 396 )
 texture = ExtResource( 11 )
+offset = Vector2( -7.72601, -120.945 )
 
 [node name="bush3" type="Sprite" parent="YSort" index="13" groups=[
 "step1",
 ]]
 
-position = Vector2( 183.858, 374.362 )
+position = Vector2( 182, 403 )
 texture = ExtResource( 8 )
+offset = Vector2( 1.858, -28.638 )
 
 [node name="tree2" type="Sprite" parent="YSort" index="14" groups=[
 "step1",
 ]]
 
-position = Vector2( 1506.14, 227.441 )
+position = Vector2( 1498, 365 )
 texture = ExtResource( 12 )
+offset = Vector2( 8.14001, -138.559 )
 
 [node name="bush4" type="Sprite" parent="YSort" index="15" groups=[
 "step1",
 ]]
 
-position = Vector2( 1546.95, 355.317 )
+position = Vector2( 1550, 384 )
 texture = ExtResource( 8 )
+offset = Vector2( -3.05005, -28.683 )
 
-[node name="tree1" type="Sprite" parent="YSort" index="16" groups=[
+[node name="bush7" type="Sprite" parent="YSort" index="16" groups=[
+"step2",
 "step1",
 ]]
 
-position = Vector2( 188.423, 822.782 )
+position = Vector2( 1964.17, 910.768 )
+texture = ExtResource( 8 )
+offset = Vector2( -3.05005, -28.683 )
+
+[node name="bush8" type="Sprite" parent="YSort" index="17" groups=[
+"step2",
+"step1",
+]]
+
+position = Vector2( 2872.82, 892.262 )
+texture = ExtResource( 8 )
+offset = Vector2( -3.05005, -28.683 )
+
+[node name="tree1" type="Sprite" parent="YSort" index="18" groups=[
+"step1",
+]]
+
+position = Vector2( 182, 960 )
 texture = ExtResource( 13 )
+offset = Vector2( 6.423, -137.218 )
 
-[node name="bush5" type="Sprite" parent="YSort" index="17" groups=[
+[node name="bush5" type="Sprite" parent="YSort" index="19" groups=[
 "step1",
 ]]
 
-position = Vector2( 129.492, 965.2 )
+position = Vector2( 131, 996 )
 texture = ExtResource( 8 )
+offset = Vector2( -1.508, -30.8 )
 
-[node name="sign" type="Sprite" parent="YSort" index="18" groups=[
+[node name="sign" type="Sprite" parent="YSort" index="20" groups=[
 "step1",
 ]]
 
-position = Vector2( 1641.18, 881.582 )
+position = Vector2( 1628, 910 )
 texture = ExtResource( 14 )
+offset = Vector2( 13.1801, -28.418 )
 
-[node name="well" type="Sprite" parent="YSort" index="19" groups=[
+[node name="well" type="Sprite" parent="YSort" index="21" groups=[
 "step1",
 ]]
 
-position = Vector2( 719.845, 239.685 )
+position = Vector2( 720, 346 )
 texture = ExtResource( 15 )
+offset = Vector2( -0.155029, -107.315 )
 
-[node name="bush6" type="Sprite" parent="YSort" index="20" groups=[
+[node name="bush6" type="Sprite" parent="YSort" index="22" groups=[
 "step1",
 ]]
 
-position = Vector2( 786.504, 338.992 )
+position = Vector2( 786, 366 )
 texture = ExtResource( 8 )
+offset = Vector2( 0.504028, -27.008 )
 
-[node name="red_house" type="Sprite" parent="YSort" index="21" groups=[
+[node name="red_house" type="Sprite" parent="YSort" index="23" groups=[
 "step1",
 ]]
 
-position = Vector2( 1086.09, 304.739 )
+position = Vector2( 1089, 432 )
 texture = ExtResource( 16 )
+offset = Vector2( -2.91455, -127.261 )
 
 [node name="StaticBody2D" parent="." index="2" instance=ExtResource( 17 )]
 
-editor/display_folded = true
 position = Vector2( 500.665, 927.603 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
@@ -369,6 +406,7 @@ shape = SubResource( 4 )
 
 [node name="Darkness" type="Sprite" parent="." index="3"]
 
+visible = false
 light_mask = 2
 scale = Vector2( 1000, 1000 )
 texture = ExtResource( 18 )
@@ -389,7 +427,7 @@ script = ExtResource( 19 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerAreas/Trigger1" index="0"]
 
-position = Vector2( 4223.3, 942.035 )
+position = Vector2( 4333.3, 942.035 )
 shape = SubResource( 5 )
 
 [node name="Trigger2" type="Area2D" parent="TriggerAreas" index="1"]
