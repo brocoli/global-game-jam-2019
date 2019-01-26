@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bussola inteira sem ponteiro.png-31a8b9422e00e9e4574edc5e94a25cea.stex"
+path="res://.import/bussola_antiga.png-40df412589f6516348423002318dade1.stex"
 
 [deps]
 
-source_file="res://art/bussola/bussola inteira sem ponteiro.png"
-dest_files=[ "res://.import/bussola inteira sem ponteiro.png-31a8b9422e00e9e4574edc5e94a25cea.stex" ]
+source_file="res://art/bussola/bussola_antiga.png"
+dest_files=[ "res://.import/bussola_antiga.png-40df412589f6516348423002318dade1.stex" ]
 
 [params]
 

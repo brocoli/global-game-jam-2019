@@ -13,7 +13,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="PersonagemWalk" type="AnimatedSprite" index="0"]
+[node name="PersonagemWalk" type="AnimatedSprite"]
 
 frames = SubResource( 1 )
 animation = "default"
