@@ -20,7 +20,5 @@ movement_speed = 250
 [node name="AnimatedSprite" parent="Player" index="0" instance=ExtResource( 3 )]
 
 position = Vector2( 289.746, 229.587 )
-frame = 1
-playing = true
 
 
