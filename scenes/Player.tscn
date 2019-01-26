@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/PersonagemWalk.tscn" type="PackedScene" id=1]
 [ext_resource path="res://art/personagem/personagem-cry-menor.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://src/player_movement.gd" type="Script" id=5]
 [ext_resource path="res://scenes/Compass.tscn" type="PackedScene" id=6]
 [ext_resource path="res://art/cenario/light.png" type="Texture" id=7]
+[ext_resource path="res://src/CameraLimitsUpdater.gd" type="Script" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -17,7 +18,15 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Player" type="KinematicBody2D"]
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 85.5518, 99.9866 )
+_sections_unfolded = [ "Resource" ]
+
+[node name="Player" type="KinematicBody2D" groups=[
+"player_proximity",
+]]
 
 input_pickable = false
 collision_layer = 1
@@ -36,6 +45,7 @@ movement_speed = 250
 
 [node name="Compass" parent="." index="2" instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 0, -91 )
 scale = Vector2( 0.4, 0.4 )
 broken = true
@@ -43,14 +53,15 @@ rotation_speed = 500
 
 [node name="Camera2D" type="Camera2D" parent="." index="3"]
 
+visible = false
 anchor_mode = 1
 rotating = false
 current = true
 zoom = Vector2( 1, 1 )
 limit_left = 0
 limit_top = 0
-limit_right = 1755
-limit_bottom = 1115
+limit_right = 2147483647
+limit_bottom = 2147483647
 limit_smoothed = false
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
@@ -65,10 +76,12 @@ drag_margin_bottom = 0.05
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
-_sections_unfolded = [ "Drag Margin", "Limit", "Smoothing" ]
+_sections_unfolded = [ "Drag Margin", "Limit", "Offset", "Smoothing" ]
 
 [node name="Light2D" type="Light2D" parent="." index="4"]
 
+visible = false
+position = Vector2( 0.540359, 36.2041 )
 enabled = true
 editor_only = false
 texture = ExtResource( 7 )
@@ -91,5 +104,15 @@ shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 _sections_unfolded = [ "Range", "Visibility" ]
+
+[node name="CameraLimitsUpdater" type="Node" parent="." index="5"]
+
+script = ExtResource( 8 )
+
+[node name="ProximityArea" type="CollisionShape2D" parent="." index="6"]
+
+position = Vector2( -2.32829, 8.74107 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 
