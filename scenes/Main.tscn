@@ -31,32 +31,32 @@ extents = Vector2( 196.335, 46.6035 )
 custom_solver_bias = 0.0
 extents = Vector2( 54.3887, 9.83307 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 174.329, 10 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 41.1077, 392.242 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 3445.92, 29.9417 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 277.533, 210.225 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
 extents = Vector2( 106.759, 119.312 )
 
-[node name="Main" type="Node" index="0"]
+[node name="Main" type="Node"]
 
 [node name="BGs" type="Node2D" parent="." index="0"]
 
@@ -306,14 +306,12 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D" index="5"]
 
 position = Vector2( 1028.84, -119.407 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D" index="6"]
 
 position = Vector2( 1143.67, -111.204 )
-scale = Vector2( 1, 1 )
-shape = SubResource( 7 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" index="7"]
 
@@ -338,34 +336,34 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" index="11"]
 
 position = Vector2( 1250.13, -498.763 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" index="12"]
 
 position = Vector2( -490.756, -354.997 )
 scale = Vector2( 1, 1.25969 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D" index="13"]
 
 position = Vector2( 4246.01, -348.326 )
 scale = Vector2( 1, 1.25969 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" index="14"]
 
 position = Vector2( 952.886, 179.313 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D" index="15"]
 
 position = Vector2( 4672.49, -134.625 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" index="16"]
 
 position = Vector2( 372.222, -882.451 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Darkness" type="Sprite" parent="." index="3"]
 
@@ -391,7 +389,7 @@ script = ExtResource( 19 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerAreas/Trigger1" index="0"]
 
 position = Vector2( 4520.63, 931.782 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="Trigger2" type="Area2D" parent="TriggerAreas" index="1"]
 
@@ -407,7 +405,7 @@ script = ExtResource( 20 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerAreas/Trigger2" index="0"]
 
 position = Vector2( 1168.55, 958.626 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [connection signal="body_entered" from="TriggerAreas/Trigger1" to="TriggerAreas/Trigger1" method="_on_Trigger1_body_entered"]
 
