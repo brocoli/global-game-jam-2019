@@ -50,33 +50,7 @@ scale = Vector2( 0.4, 0.4 )
 broken = true
 rotation_speed = 500
 
-[node name="Camera2D" type="Camera2D" parent="." index="3"]
-
-anchor_mode = 1
-rotating = false
-current = true
-zoom = Vector2( 1, 1 )
-limit_left = 0
-limit_top = 0
-limit_right = 2147483647
-limit_bottom = 2147483647
-limit_smoothed = false
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-smoothing_enabled = true
-smoothing_speed = 5.0
-offset_v = 0.0
-offset_h = 0.0
-drag_margin_left = 0.1
-drag_margin_top = 0.1
-drag_margin_right = 0.05
-drag_margin_bottom = 0.05
-editor_draw_screen = true
-editor_draw_limits = false
-editor_draw_drag_margin = false
-_sections_unfolded = [ "Drag Margin", "Limit", "Smoothing" ]
-
-[node name="Light2D" type="Light2D" parent="." index="4"]
+[node name="Light2D" type="Light2D" parent="." index="3"]
 
 enabled = true
 editor_only = false
@@ -101,7 +75,7 @@ shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 _sections_unfolded = [ "Range", "Visibility" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="4"]
 
 position = Vector2( -21.6072, 48.1782 )
 shape = SubResource( 2 )

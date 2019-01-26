@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://art/cenario/cenario 1 tamanho certo.png" type="Texture" id=2]
@@ -15,10 +15,11 @@
 [ext_resource path="res://art/Objetos/tree1.png" type="Texture" id=13]
 [ext_resource path="res://art/Objetos/sign.png" type="Texture" id=14]
 [ext_resource path="res://art/Objetos/well.png" type="Texture" id=15]
-[ext_resource path="res://scenes/StaticBody2D.tscn" type="PackedScene" id=16]
-[ext_resource path="res://art/cenario/black-screen.png" type="Texture" id=17]
-[ext_resource path="res://src/Trigger1.gd" type="Script" id=18]
-[ext_resource path="res://src/Trigger2.gd" type="Script" id=19]
+[ext_resource path="res://art/Objetos/red_house.png" type="Texture" id=16]
+[ext_resource path="res://scenes/StaticBody2D.tscn" type="PackedScene" id=17]
+[ext_resource path="res://art/cenario/black-screen.png" type="Texture" id=18]
+[ext_resource path="res://src/Trigger1.gd" type="Script" id=19]
+[ext_resource path="res://src/Trigger2.gd" type="Script" id=20]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -29,6 +30,11 @@ extents = Vector2( 196.335, 46.6035 )
 
 custom_solver_bias = 0.0
 extents = Vector2( 54.3887, 9.83307 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 174.329, 10 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
@@ -48,9 +54,9 @@ extents = Vector2( 277.533, 210.225 )
 [sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
-extents = Vector2( 106.759, 75.8123 )
+extents = Vector2( 106.759, 119.312 )
 
-[node name="Main" type="Node"]
+[node name="Main" type="Node" index="0"]
 
 [node name="BGs" type="Node2D" parent="." index="0"]
 
@@ -69,8 +75,8 @@ position = Vector2( 2363.81, 934.166 )
 texture = ExtResource( 3 )
 
 [node name="fase 3 nova" type="Sprite" parent="BGs" index="2" groups=[
-"step1",
 "step2",
+"step1",
 ]]
 
 position = Vector2( 3965.17, 934.553 )
@@ -90,8 +96,34 @@ sort_enabled = true
 
 [node name="Player" parent="YSort" index="0" instance=ExtResource( 6 )]
 
-position = Vector2( 399.726, 525.948 )
+position = Vector2( 639.726, 525.948 )
 _sections_unfolded = [ "Pause" ]
+
+[node name="Camera2D" type="Camera2D" parent="YSort/Player" index="5"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.1
+drag_margin_top = 0.1
+drag_margin_right = 0.05
+drag_margin_bottom = 0.05
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Drag Margin", "Smoothing" ]
 
 [node name="purple_house" type="Sprite" parent="YSort" index="1" groups=[
 "step1",
@@ -122,99 +154,128 @@ texture = ExtResource( 9 )
 position = Vector2( 1557.61, 565.348 )
 texture = ExtResource( 10 )
 
-[node name="boxes2" type="Sprite" parent="YSort" index="5" groups=[
+[node name="boxes5" type="Sprite" parent="YSort" index="5" groups=[
+"step1",
+]]
+
+position = Vector2( 1530.95, 766.301 )
+texture = ExtResource( 10 )
+
+[node name="boxes6" type="Sprite" parent="YSort" index="6" groups=[
+"step1",
+]]
+
+position = Vector2( 1592.47, 745.796 )
+texture = ExtResource( 10 )
+
+[node name="boxes7" type="Sprite" parent="YSort" index="7" groups=[
+"step1",
+]]
+
+position = Vector2( 1645.78, 774.504 )
+texture = ExtResource( 10 )
+
+[node name="boxes2" type="Sprite" parent="YSort" index="8" groups=[
 "step1",
 ]]
 
 position = Vector2( 106.728, 511.681 )
 texture = ExtResource( 10 )
 
-[node name="boxes4" type="Sprite" parent="YSort" index="6" groups=[
+[node name="boxes4" type="Sprite" parent="YSort" index="9" groups=[
 "step1",
 ]]
 
 position = Vector2( 3.09332, 552.394 )
 texture = ExtResource( 10 )
 
-[node name="boxes3" type="Sprite" parent="YSort" index="7" groups=[
+[node name="boxes3" type="Sprite" parent="YSort" index="10" groups=[
 "step1",
 ]]
 
 position = Vector2( 86.3712, 583.855 )
 texture = ExtResource( 10 )
 
-[node name="bush2" type="Sprite" parent="YSort" index="8" groups=[
+[node name="bush2" type="Sprite" parent="YSort" index="11" groups=[
 "step1",
 ]]
 
 position = Vector2( 1507.34, 814.064 )
 texture = ExtResource( 8 )
 
-[node name="blue_house" type="Sprite" parent="YSort" index="9" groups=[
+[node name="blue_house" type="Sprite" parent="YSort" index="12" groups=[
 "step1",
 ]]
 
 position = Vector2( 389.274, 275.055 )
 texture = ExtResource( 11 )
 
-[node name="bush3" type="Sprite" parent="YSort" index="10" groups=[
+[node name="bush3" type="Sprite" parent="YSort" index="13" groups=[
 "step1",
 ]]
 
 position = Vector2( 183.858, 374.362 )
 texture = ExtResource( 8 )
 
-[node name="tree2" type="Sprite" parent="YSort" index="11" groups=[
+[node name="tree2" type="Sprite" parent="YSort" index="14" groups=[
 "step1",
 ]]
 
 position = Vector2( 1506.14, 227.441 )
 texture = ExtResource( 12 )
 
-[node name="bush4" type="Sprite" parent="YSort" index="12" groups=[
+[node name="bush4" type="Sprite" parent="YSort" index="15" groups=[
 "step1",
 ]]
 
 position = Vector2( 1546.95, 355.317 )
 texture = ExtResource( 8 )
 
-[node name="tree1" type="Sprite" parent="YSort" index="13" groups=[
+[node name="tree1" type="Sprite" parent="YSort" index="16" groups=[
 "step1",
 ]]
 
 position = Vector2( 188.423, 822.782 )
 texture = ExtResource( 13 )
 
-[node name="bush5" type="Sprite" parent="YSort" index="14" groups=[
+[node name="bush5" type="Sprite" parent="YSort" index="17" groups=[
 "step1",
 ]]
 
 position = Vector2( 129.492, 965.2 )
 texture = ExtResource( 8 )
 
-[node name="sign" type="Sprite" parent="YSort" index="15" groups=[
+[node name="sign" type="Sprite" parent="YSort" index="18" groups=[
 "step1",
 ]]
 
 position = Vector2( 1641.18, 881.582 )
 texture = ExtResource( 14 )
 
-[node name="well" type="Sprite" parent="YSort" index="16" groups=[
+[node name="well" type="Sprite" parent="YSort" index="19" groups=[
 "step1",
 ]]
 
 position = Vector2( 719.845, 239.685 )
 texture = ExtResource( 15 )
 
-[node name="bush6" type="Sprite" parent="YSort" index="17" groups=[
+[node name="bush6" type="Sprite" parent="YSort" index="20" groups=[
 "step1",
 ]]
 
 position = Vector2( 786.504, 338.992 )
 texture = ExtResource( 8 )
 
-[node name="StaticBody2D" parent="." index="2" instance=ExtResource( 16 )]
+[node name="red_house" type="Sprite" parent="YSort" index="21" groups=[
+"step1",
+]]
 
+position = Vector2( 1086.09, 304.739 )
+texture = ExtResource( 16 )
+
+[node name="StaticBody2D" parent="." index="2" instance=ExtResource( 17 )]
+
+editor/display_folded = true
 position = Vector2( 500.665, 927.603 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
@@ -227,59 +288,81 @@ shape = SubResource( 1 )
 position = Vector2( 792.986, -133.594 )
 shape = SubResource( 1 )
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" index="2"]
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D" index="2"]
+
+position = Vector2( -102.446, -557.599 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D" index="3"]
+
+position = Vector2( 592.141, -540.862 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" index="4"]
 
 position = Vector2( 1055.5, -320.36 )
 shape = SubResource( 2 )
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" index="3"]
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D" index="5"]
+
+position = Vector2( 1028.84, -119.407 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D" index="6"]
+
+position = Vector2( 1143.67, -111.204 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" index="7"]
 
 position = Vector2( 213.426, -588.354 )
 shape = SubResource( 2 )
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" index="4"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" index="8"]
 
 position = Vector2( -395.387, -374.028 )
 shape = SubResource( 2 )
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" index="5"]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" index="9"]
 
 position = Vector2( -499.022, -333.314 )
 shape = SubResource( 2 )
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" index="6"]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" index="10"]
 
 position = Vector2( -415.744, -301.854 )
 shape = SubResource( 2 )
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" index="7"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" index="11"]
 
 position = Vector2( 1250.13, -498.763 )
 shape = SubResource( 3 )
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" index="8"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" index="12"]
 
 position = Vector2( -490.756, -354.997 )
 scale = Vector2( 1, 1.25969 )
 shape = SubResource( 3 )
 
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D" index="9"]
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D" index="13"]
 
 position = Vector2( 4246.01, -348.326 )
 scale = Vector2( 1, 1.25969 )
 shape = SubResource( 3 )
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" index="10"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" index="14"]
 
 position = Vector2( 952.886, 179.313 )
 shape = SubResource( 4 )
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D" index="11"]
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D" index="15"]
 
 position = Vector2( 4672.49, -134.625 )
 shape = SubResource( 4 )
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" index="12"]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" index="16"]
 
 position = Vector2( 372.222, -882.451 )
 shape = SubResource( 4 )
@@ -289,7 +372,7 @@ shape = SubResource( 4 )
 visible = false
 light_mask = 2
 scale = Vector2( 1000, 1000 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="TriggerAreas" type="Node" parent="." index="4"]
@@ -303,7 +386,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 18 )
+script = ExtResource( 19 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerAreas/Trigger1" index="0"]
 
@@ -319,11 +402,11 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 19 )
+script = ExtResource( 20 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerAreas/Trigger2" index="0"]
 
-position = Vector2( 1163.29, 945.06 )
+position = Vector2( 1168.55, 958.626 )
 shape = SubResource( 6 )
 
 [connection signal="body_entered" from="TriggerAreas/Trigger1" to="TriggerAreas/Trigger1" method="_on_Trigger1_body_entered"]
