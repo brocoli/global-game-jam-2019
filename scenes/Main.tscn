@@ -49,14 +49,14 @@ extents = Vector2( 3445.92, 29.9417 )
 [sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
-extents = Vector2( 277.533, 210.225 )
+extents = Vector2( 567.724, 210.225 )
 
 [sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
 extents = Vector2( 106.759, 119.312 )
 
-[node name="Main" type="Node"]
+[node name="Main" type="Node" index="0"]
 
 [node name="BGs" type="Node2D" parent="." index="0"]
 
@@ -75,8 +75,8 @@ position = Vector2( 2363.81, 934.166 )
 texture = ExtResource( 3 )
 
 [node name="fase 3 nova" type="Sprite" parent="BGs" index="2" groups=[
-"step2",
 "step1",
+"step2",
 ]]
 
 position = Vector2( 3965.17, 934.553 )
@@ -388,7 +388,7 @@ script = ExtResource( 19 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerAreas/Trigger1" index="0"]
 
-position = Vector2( 4520.63, 931.782 )
+position = Vector2( 4223.3, 942.035 )
 shape = SubResource( 6 )
 
 [node name="Trigger2" type="Area2D" parent="TriggerAreas" index="1"]

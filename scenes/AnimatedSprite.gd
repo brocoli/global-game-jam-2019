@@ -21,4 +21,12 @@ func _on_Timer_timeout():
 
 
 func _on_NextSceneTimer_timeout():
-		get_tree().change_scene("res://scenes/InsideWell.tscn")
+	get_tree().change_scene("res://scenes/InsideWell.tscn")
+
+
+func _on_BlackoutTimer_timeout():
+	get_parent().visible = false
+
+
+func _on_BlackinTimer_timeout():
+	get_node("../AnimatedSprite").visible = true
