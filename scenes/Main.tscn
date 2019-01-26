@@ -14,9 +14,9 @@
 [ext_resource path="res://art/Objetos/tree2.png" type="Texture" id=12]
 [ext_resource path="res://art/Objetos/tree1.png" type="Texture" id=13]
 [ext_resource path="res://art/Objetos/sign.png" type="Texture" id=14]
-[ext_resource path="res://scenes/StaticBody2D.tscn" type="PackedScene" id=15]
-[ext_resource path="res://art/cenario/black-screen.png" type="Texture" id=16]
-[ext_resource path="res://art/Objetos/well.png" type="Texture" id=17]
+[ext_resource path="res://art/Objetos/well.png" type="Texture" id=15]
+[ext_resource path="res://scenes/StaticBody2D.tscn" type="PackedScene" id=16]
+[ext_resource path="res://art/cenario/black-screen.png" type="Texture" id=17]
 [ext_resource path="res://src/Trigger1.gd" type="Script" id=18]
 [ext_resource path="res://src/Trigger2.gd" type="Script" id=19]
 
@@ -69,8 +69,8 @@ position = Vector2( 2363.81, 934.166 )
 texture = ExtResource( 3 )
 
 [node name="fase 3 nova" type="Sprite" parent="BGs" index="2" groups=[
-"step2",
 "step1",
+"step2",
 ]]
 
 position = Vector2( 3965.17, 934.553 )
@@ -199,7 +199,21 @@ texture = ExtResource( 8 )
 position = Vector2( 1641.18, 881.582 )
 texture = ExtResource( 14 )
 
-[node name="StaticBody2D" parent="." index="2" instance=ExtResource( 15 )]
+[node name="well" type="Sprite" parent="YSort" index="16" groups=[
+"step1",
+]]
+
+position = Vector2( 719.845, 239.685 )
+texture = ExtResource( 15 )
+
+[node name="bush6" type="Sprite" parent="YSort" index="17" groups=[
+"step1",
+]]
+
+position = Vector2( 786.504, 338.992 )
+texture = ExtResource( 8 )
+
+[node name="StaticBody2D" parent="." index="2" instance=ExtResource( 16 )]
 
 position = Vector2( 500.665, 927.603 )
 
@@ -264,20 +278,10 @@ shape = SubResource( 4 )
 visible = false
 light_mask = 2
 scale = Vector2( 1000, 1000 )
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="well" type="Sprite" parent="." index="4"]
-
-position = Vector2( 719.845, 239.685 )
-texture = ExtResource( 17 )
-
-[node name="bush" type="Sprite" parent="." index="5"]
-
-position = Vector2( 786.504, 338.992 )
-texture = ExtResource( 8 )
-
-[node name="TriggerAreas" type="Node" parent="." index="6"]
+[node name="TriggerAreas" type="Node" parent="." index="4"]
 
 [node name="Trigger1" type="Area2D" parent="TriggerAreas" index="0"]
 
