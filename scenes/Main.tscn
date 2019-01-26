@@ -56,7 +56,7 @@ extents = Vector2( 567.724, 210.225 )
 custom_solver_bias = 0.0
 extents = Vector2( 106.759, 119.312 )
 
-[node name="Main" type="Node"]
+[node name="Main" type="Node" index="0"]
 
 [node name="BGs" type="Node2D" parent="." index="0"]
 
@@ -75,8 +75,8 @@ position = Vector2( 2363.81, 934.166 )
 texture = ExtResource( 3 )
 
 [node name="fase 3 nova" type="Sprite" parent="BGs" index="2" groups=[
-"step1",
 "step2",
+"step1",
 ]]
 
 position = Vector2( 3965.17, 934.553 )
@@ -92,6 +92,7 @@ texture = ExtResource( 5 )
 
 [node name="YSort" type="YSort" parent="." index="1"]
 
+editor/display_folded = true
 sort_enabled = true
 
 [node name="Player" parent="YSort" index="0" instance=ExtResource( 6 )]
@@ -123,7 +124,7 @@ drag_margin_bottom = 0.05
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
-_sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Smoothing" ]
+_sections_unfolded = [ "Drag Margin", "Smoothing" ]
 
 [node name="purple_house" type="Sprite" parent="YSort" index="1" groups=[
 "step1",
@@ -246,8 +247,8 @@ texture = ExtResource( 8 )
 offset = Vector2( -3.05005, -28.683 )
 
 [node name="bush7" type="Sprite" parent="YSort" index="16" groups=[
-"step1",
 "step2",
+"step1",
 ]]
 
 position = Vector2( 1964.17, 910.768 )
@@ -255,8 +256,8 @@ texture = ExtResource( 8 )
 offset = Vector2( -3.05005, -28.683 )
 
 [node name="bush8" type="Sprite" parent="YSort" index="17" groups=[
-"step1",
 "step2",
+"step1",
 ]]
 
 position = Vector2( 2872.82, 892.262 )
@@ -429,6 +430,7 @@ script = ExtResource( 19 )
 
 position = Vector2( 4477.82, 942.035 )
 shape = SubResource( 6 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Trigger2" type="Area2D" parent="TriggerAreas" index="1"]
 
