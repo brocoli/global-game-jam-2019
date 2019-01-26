@@ -4,9 +4,9 @@
 [ext_resource path="res://art/personagem/personagem-cry-menor.png" type="Texture" id=2]
 [ext_resource path="res://art/personagem/personagem-cry-menor2.png" type="Texture" id=3]
 [ext_resource path="res://art/personagem/personagem-cry-menor3.png" type="Texture" id=4]
-[ext_resource path="res://src/player_movement.gd" type="Script" id=5]
-[ext_resource path="res://scenes/Compass.tscn" type="PackedScene" id=6]
-[ext_resource path="res://art/cenario/light.png" type="Texture" id=7]
+[ext_resource path="res://art/personagem/light-shadow.png" type="Texture" id=5]
+[ext_resource path="res://src/player_movement.gd" type="Script" id=6]
+[ext_resource path="res://scenes/Compass.tscn" type="PackedScene" id=7]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -17,7 +17,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -29,28 +29,35 @@ collision/safe_margin = 0.08
 frames = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Movement" type="Node" parent="." index="1"]
+[node name="Darkness" type="Sprite" parent="." index="1"]
 
-script = ExtResource( 5 )
+visible = false
+scale = Vector2( 10, 10 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Movement" type="Node" parent="." index="2"]
+
+script = ExtResource( 6 )
 movement_speed = 250
 
-[node name="Compass" parent="." index="2" instance=ExtResource( 6 )]
+[node name="Compass" parent="." index="3" instance=ExtResource( 7 )]
 
 position = Vector2( 0, -91 )
 scale = Vector2( 0.4, 0.4 )
 broken = true
 rotation_speed = 500
 
-[node name="Camera2D" type="Camera2D" parent="." index="3"]
+[node name="Camera2D" type="Camera2D" parent="." index="4"]
 
 anchor_mode = 1
 rotating = false
 current = true
 zoom = Vector2( 1, 1 )
-limit_left = -10000000
-limit_top = -10000000
-limit_right = 10000000
-limit_bottom = 10000000
+limit_left = 0
+limit_top = 0
+limit_right = 1755
+limit_bottom = 1115
 limit_smoothed = false
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
@@ -65,31 +72,6 @@ drag_margin_bottom = 0.05
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
-_sections_unfolded = [ "Drag Margin", "Smoothing" ]
-
-[node name="LightSource" type="Light2D" parent="." index="4"]
-
-enabled = true
-editor_only = false
-texture = ExtResource( 7 )
-offset = Vector2( 0, 0 )
-texture_scale = 1.0
-color = Color( 1, 1, 1, 1 )
-energy = 1.0
-mode = 3
-range_height = 0.0
-range_z_min = -1024
-range_z_max = 1024
-range_layer_min = 0
-range_layer_max = 0
-range_item_cull_mask = 2
-shadow_enabled = false
-shadow_color = Color( 0, 0, 0, 0 )
-shadow_buffer_size = 2048
-shadow_gradient_length = 0.0
-shadow_filter = 0
-shadow_filter_smooth = 0.0
-shadow_item_cull_mask = 1
-_sections_unfolded = [ "Range", "Transform" ]
+_sections_unfolded = [ "Drag Margin", "Limit", "Smoothing" ]
 
 
