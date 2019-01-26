@@ -369,7 +369,6 @@ shape = SubResource( 4 )
 
 [node name="Darkness" type="Sprite" parent="." index="3"]
 
-visible = false
 light_mask = 2
 scale = Vector2( 1000, 1000 )
 texture = ExtResource( 18 )
