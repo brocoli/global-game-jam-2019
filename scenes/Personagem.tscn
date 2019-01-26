@@ -25,7 +25,6 @@ position = Vector2( 20.8716, -15.9606 )
 position = Vector2( 17.1883, -110.496 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 2
 playing = true
 
 
