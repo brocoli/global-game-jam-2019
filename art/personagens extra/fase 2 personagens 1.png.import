@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cenario 1 tamanho certo.png-895c593762aa0e1f1a23686cb1e8bd0b.stex"
+path="res://.import/fase 2 personagens 1.png-b48029b3772151844355261819d83c8b.stex"
 
 [deps]
 
-source_file="res://art/personagem/cenario 1 tamanho certo.png"
-dest_files=[ "res://.import/cenario 1 tamanho certo.png-895c593762aa0e1f1a23686cb1e8bd0b.stex" ]
+source_file="res://art/personagens extra/fase 2 personagens 1.png"
+dest_files=[ "res://.import/fase 2 personagens 1.png-b48029b3772151844355261819d83c8b.stex" ]
 
 [params]
 
