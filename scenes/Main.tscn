@@ -66,6 +66,7 @@ extents = Vector2( 106.759, 119.312 )
 
 [node name="ColorRect" type="ColorRect" parent="." index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -137,6 +138,8 @@ size_flags_vertical = 1
 color = Color( 0, 0, 0, 0.375686 )
 
 [node name="BGs" type="Node2D" parent="." index="1"]
+
+editor/display_folded = true
 
 [node name="Town" parent="BGs" index="0" groups=[
 "step1",
@@ -536,6 +539,8 @@ shape = SubResource( 5 )
 visible = false
 
 [node name="TriggerAreas" type="Node" parent="." index="5"]
+
+editor/display_folded = true
 
 [node name="Trigger1" type="Area2D" parent="TriggerAreas" index="0"]
 

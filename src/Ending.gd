@@ -20,4 +20,6 @@ func _ready():
 	play("1")
 	$Timer.start()
 	yield($Timer, "timeout")
+	$Timer.start()
+	yield($Timer, "timeout")
 	get_tree().change_scene("res://scenes/Credits.tscn")
