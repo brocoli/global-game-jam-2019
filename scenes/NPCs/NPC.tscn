@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/NPC.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Compass.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -28,7 +29,12 @@ _sections_unfolded = [ "Audio Bus", "Collision", "Material", "Transform", "Visib
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[node name="Compass" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 80, -60 )
+scale = Vector2( 0.15, 0.15 )
+broken = true
+target = NodePath("Null")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
