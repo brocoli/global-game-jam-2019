@@ -14,12 +14,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="NPCJourney" type="AnimatedSprite" index="0"]
+[node name="NPCJourney" type="AnimatedSprite"]
 
 frames = SubResource( 1 )
 animation = "default"
-frame = 2
-playing = true
 
 [node name="NPC" parent="." index="0" instance=ExtResource( 4 )]
 

@@ -19,8 +19,6 @@ animations = [ {
 
 frames = SubResource( 1 )
 animation = "default"
-frame = 2
-playing = true
 
 [node name="NPC" parent="." index="0" instance=ExtResource( 5 )]
 
