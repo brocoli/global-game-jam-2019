@@ -30,7 +30,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="AnimatedSprite" type="AnimatedSprite" index="0"]
+[node name="Intro2" type="AnimatedSprite"]
 
 position = Vector2( 400, 300 )
 frames = SubResource( 1 )
