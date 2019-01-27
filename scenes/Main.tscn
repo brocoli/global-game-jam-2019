@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://art/cenario/cenario 1 tamanho certo.png" type="Texture" id=2]
@@ -16,10 +16,15 @@
 [ext_resource path="res://art/Objetos/sign.png" type="Texture" id=14]
 [ext_resource path="res://art/Objetos/well.png" type="Texture" id=15]
 [ext_resource path="res://art/Objetos/red_house.png" type="Texture" id=16]
-[ext_resource path="res://scenes/StaticBody2D.tscn" type="PackedScene" id=17]
-[ext_resource path="res://art/cenario/black-screen.png" type="Texture" id=18]
-[ext_resource path="res://src/Trigger1.gd" type="Script" id=19]
-[ext_resource path="res://src/Trigger2.gd" type="Script" id=20]
+[ext_resource path="res://art/personagens_cidade/older_cheesecake.png" type="Texture" id=17]
+[ext_resource path="res://art/personagens_cidade/long_cheesecake.png" type="Texture" id=18]
+[ext_resource path="res://art/personagens_cidade/cute_cheesecake.png" type="Texture" id=19]
+[ext_resource path="res://art/personagens_cidade/chunky_cheesecake.png" type="Texture" id=20]
+[ext_resource path="res://art/personagens_cidade/old_cheesecake.png" type="Texture" id=21]
+[ext_resource path="res://scenes/StaticBody2D.tscn" type="PackedScene" id=22]
+[ext_resource path="res://art/cenario/black-screen.png" type="Texture" id=23]
+[ext_resource path="res://src/Trigger1.gd" type="Script" id=24]
+[ext_resource path="res://src/Trigger2.gd" type="Script" id=25]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -58,7 +63,79 @@ extents = Vector2( 106.759, 119.312 )
 
 [node name="Main" type="Node"]
 
-[node name="BGs" type="Node2D" parent="." index="0"]
+[node name="ColorRect" type="ColorRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 3212.0
+margin_top = 165.0
+margin_right = 5717.0
+margin_bottom = 1651.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -252.0
+margin_top = 35.0
+margin_right = 1592.0
+margin_bottom = 1408.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 0.375686 )
+
+[node name="ColorRect4" type="ColorRect" parent="ColorRect" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -429.0
+margin_top = 46.0
+margin_right = 1415.0
+margin_bottom = 1419.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 0.375686 )
+
+[node name="ColorRect3" type="ColorRect" parent="ColorRect" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -118.0
+margin_top = 76.0
+margin_right = 1949.0
+margin_bottom = 1466.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 0.375686 )
+
+[node name="BGs" type="Node2D" parent="." index="1"]
 
 [node name="Town" parent="BGs" index="0" groups=[
 "step1",
@@ -90,16 +167,14 @@ visible = false
 position = Vector2( 2130.12, 934.123 )
 texture = ExtResource( 5 )
 
-[node name="YSort" type="YSort" parent="." index="1"]
+[node name="YSort" type="YSort" parent="." index="2"]
 
-editor/display_folded = true
 sort_enabled = true
 
 [node name="Player" parent="YSort" index="0" instance=ExtResource( 6 )]
 
-position = Vector2( 639.726, 525.948 )
+position = Vector2( 639.726, 524.948 )
 _sections_unfolded = [ "Collision", "Pause", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
-is_inside_well = false
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player" index="5"]
 
@@ -179,7 +254,7 @@ offset = Vector2( 3.46924, -52.2041 )
 "step1",
 ]]
 
-position = Vector2( 1645, 824 )
+position = Vector2( 1647, 824 )
 texture = ExtResource( 10 )
 offset = Vector2( 0.783325, -49.4965 )
 
@@ -313,7 +388,54 @@ position = Vector2( 1089, 432 )
 texture = ExtResource( 16 )
 offset = Vector2( -2.91455, -127.261 )
 
-[node name="StaticBody2D" parent="." index="2" instance=ExtResource( 17 )]
+[node name="older_cheesecake2" type="Sprite" parent="YSort" index="24"]
+
+position = Vector2( 813.098, 305 )
+scale = Vector2( -0.926829, 1 )
+texture = ExtResource( 17 )
+offset = Vector2( 26, -45 )
+
+[node name="older_cheesecake" type="Sprite" parent="YSort" index="25"]
+
+position = Vector2( 283, 433 )
+texture = ExtResource( 17 )
+offset = Vector2( 27, -45 )
+
+[node name="long_cheesecake" type="Sprite" parent="YSort" index="26"]
+
+position = Vector2( 708, 989 )
+texture = ExtResource( 18 )
+offset = Vector2( 12, -88 )
+
+[node name="cute_cheesecake" type="Sprite" parent="YSort" index="27"]
+
+position = Vector2( 996, 489 )
+texture = ExtResource( 19 )
+offset = Vector2( -10, -38 )
+
+[node name="chunky_cheesecake" type="Sprite" parent="YSort" index="28"]
+
+position = Vector2( 944, 455 )
+texture = ExtResource( 20 )
+offset = Vector2( -13, -47 )
+
+[node name="old_cheesecake" type="Sprite" parent="YSort" index="29" groups=[
+"step1",
+]]
+
+position = Vector2( 1380, 872 )
+texture = ExtResource( 21 )
+offset = Vector2( 22, -35 )
+
+[node name="older_cheesecake3" type="Sprite" parent="YSort" index="30" groups=[
+"step1",
+]]
+
+position = Vector2( 1430, 863 )
+texture = ExtResource( 17 )
+offset = Vector2( 28, -43 )
+
+[node name="StaticBody2D" parent="." index="3" instance=ExtResource( 22 )]
 
 editor/display_folded = true
 visible = false
@@ -406,15 +528,15 @@ shape = SubResource( 5 )
 position = Vector2( 372.222, -882.451 )
 shape = SubResource( 5 )
 
-[node name="Darkness" type="Sprite" parent="." index="3"]
+[node name="Darkness" type="Sprite" parent="." index="4"]
 
 visible = false
 light_mask = 2
 scale = Vector2( 1000, 1000 )
-texture = ExtResource( 18 )
+texture = ExtResource( 23 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="TriggerAreas" type="Node" parent="." index="4"]
+[node name="TriggerAreas" type="Node" parent="." index="5"]
 
 [node name="Trigger1" type="Area2D" parent="TriggerAreas" index="0"]
 
@@ -425,7 +547,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 19 )
+script = ExtResource( 24 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerAreas/Trigger1" index="0"]
 
@@ -442,7 +564,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 20 )
+script = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerAreas/Trigger2" index="0"]
 
