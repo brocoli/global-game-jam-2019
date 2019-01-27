@@ -1,0 +1,344 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=1]
+[ext_resource path="res://art/cenario/cenario 1 tamanho certo.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://art/Objetos/purple_house.png" type="Texture" id=4]
+[ext_resource path="res://art/Objetos/bush.png" type="Texture" id=5]
+[ext_resource path="res://art/Objetos/orange_house.png" type="Texture" id=6]
+[ext_resource path="res://art/Objetos/boxes.png" type="Texture" id=7]
+[ext_resource path="res://art/Objetos/blue_house.png" type="Texture" id=8]
+[ext_resource path="res://art/Objetos/tree2.png" type="Texture" id=9]
+[ext_resource path="res://art/Objetos/tree1.png" type="Texture" id=10]
+[ext_resource path="res://art/Objetos/sign.png" type="Texture" id=11]
+[ext_resource path="res://art/Objetos/well.png" type="Texture" id=12]
+[ext_resource path="res://art/Objetos/red_house.png" type="Texture" id=13]
+[ext_resource path="res://scenes/StaticBody2D.tscn" type="PackedScene" id=14]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 196.335, 46.6035 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 54.3887, 9.83307 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 174.329, 10 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 41.1077, 544.4 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 3445.92, 29.9417 )
+
+[node name="EndingTown" type="Node" index="0"]
+
+[node name="BGs" type="Node2D" parent="." index="0"]
+
+[node name="Town" parent="BGs" index="0" groups=[
+"step1",
+] instance=ExtResource( 1 )]
+
+position = Vector2( 886.673, 556.537 )
+texture = ExtResource( 2 )
+
+[node name="YSort" type="YSort" parent="." index="1"]
+
+sort_enabled = true
+
+[node name="Player" parent="YSort" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 690.063, 387.214 )
+_sections_unfolded = [ "Collision", "Pause", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
+
+[node name="Compass" parent="YSort/Player" index="3"]
+
+broken = false
+crushed = true
+
+[node name="Camera2D" type="Camera2D" parent="YSort/Player" index="5"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 6.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.1
+drag_margin_top = 0.1
+drag_margin_right = 0.05
+drag_margin_bottom = 0.05
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Drag Margin", "Smoothing" ]
+
+[node name="purple_house" type="Sprite" parent="YSort" index="1" groups=[
+"step1",
+]]
+
+position = Vector2( 508, 955.909 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.161987, -122.483 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="bush" type="Sprite" parent="YSort" index="2" groups=[
+"step1",
+]]
+
+position = Vector2( 507, 994 )
+texture = ExtResource( 5 )
+offset = Vector2( -1.28799, -31.073 )
+
+[node name="orange_house" type="Sprite" parent="YSort" index="3" groups=[
+"step1",
+]]
+
+position = Vector2( 1300, 832 )
+texture = ExtResource( 6 )
+offset = Vector2( -5.58997, -125.395 )
+
+[node name="boxes" type="Sprite" parent="YSort" index="4" groups=[
+"step1",
+]]
+
+position = Vector2( 1557.61, 565.348 )
+texture = ExtResource( 7 )
+
+[node name="boxes5" type="Sprite" parent="YSort" index="5" groups=[
+"step1",
+]]
+
+position = Vector2( 1531, 818 )
+texture = ExtResource( 7 )
+offset = Vector2( -0.0471191, -51.6987 )
+
+[node name="boxes6" type="Sprite" parent="YSort" index="6" groups=[
+"step1",
+]]
+
+position = Vector2( 1589, 798 )
+texture = ExtResource( 7 )
+offset = Vector2( 3.46924, -52.2041 )
+
+[node name="boxes7" type="Sprite" parent="YSort" index="7" groups=[
+"step1",
+]]
+
+position = Vector2( 1645, 824 )
+texture = ExtResource( 7 )
+offset = Vector2( 0.783325, -49.4965 )
+
+[node name="boxes2" type="Sprite" parent="YSort" index="8" groups=[
+"step1",
+]]
+
+position = Vector2( 110, 562 )
+texture = ExtResource( 7 )
+offset = Vector2( -3.272, -50.319 )
+
+[node name="boxes4" type="Sprite" parent="YSort" index="9" groups=[
+"step1",
+]]
+
+position = Vector2( 0, 604 )
+texture = ExtResource( 7 )
+offset = Vector2( 3.09332, -51.606 )
+
+[node name="boxes3" type="Sprite" parent="YSort" index="10" groups=[
+"step1",
+]]
+
+position = Vector2( 83, 635 )
+texture = ExtResource( 7 )
+offset = Vector2( 3.3712, -51.145 )
+
+[node name="bush2" type="Sprite" parent="YSort" index="11" groups=[
+"step1",
+]]
+
+position = Vector2( 1509, 845 )
+texture = ExtResource( 5 )
+offset = Vector2( -1.66003, -30.936 )
+
+[node name="blue_house" type="Sprite" parent="YSort" index="12" groups=[
+"step1",
+]]
+
+position = Vector2( 397, 396 )
+texture = ExtResource( 8 )
+offset = Vector2( -7.72601, -120.945 )
+
+[node name="bush3" type="Sprite" parent="YSort" index="13" groups=[
+"step1",
+]]
+
+position = Vector2( 182, 403 )
+texture = ExtResource( 5 )
+offset = Vector2( 1.858, -28.638 )
+
+[node name="tree2" type="Sprite" parent="YSort" index="14" groups=[
+"step1",
+]]
+
+position = Vector2( 1498, 365 )
+texture = ExtResource( 9 )
+offset = Vector2( 8.14001, -138.559 )
+
+[node name="bush4" type="Sprite" parent="YSort" index="15" groups=[
+"step1",
+]]
+
+position = Vector2( 1550, 384 )
+texture = ExtResource( 5 )
+offset = Vector2( -3.05005, -28.683 )
+
+[node name="tree1" type="Sprite" parent="YSort" index="16" groups=[
+"step1",
+]]
+
+position = Vector2( 182, 960 )
+texture = ExtResource( 10 )
+offset = Vector2( 6.423, -137.218 )
+
+[node name="bush5" type="Sprite" parent="YSort" index="17" groups=[
+"step1",
+]]
+
+position = Vector2( 131, 996 )
+texture = ExtResource( 5 )
+offset = Vector2( -1.508, -30.8 )
+
+[node name="sign" type="Sprite" parent="YSort" index="18" groups=[
+"step1",
+]]
+
+position = Vector2( 1628, 910 )
+texture = ExtResource( 11 )
+offset = Vector2( 13.1801, -28.418 )
+
+[node name="well" type="Sprite" parent="YSort" index="19" groups=[
+"step1",
+]]
+
+position = Vector2( 720, 346 )
+texture = ExtResource( 12 )
+offset = Vector2( -0.155029, -107.315 )
+
+[node name="bush6" type="Sprite" parent="YSort" index="20" groups=[
+"step1",
+]]
+
+position = Vector2( 786, 366 )
+texture = ExtResource( 5 )
+offset = Vector2( 0.504028, -27.008 )
+
+[node name="red_house" type="Sprite" parent="YSort" index="21" groups=[
+"step1",
+]]
+
+position = Vector2( 1089, 432 )
+texture = ExtResource( 13 )
+offset = Vector2( -2.91455, -127.261 )
+
+[node name="StaticBody2D" parent="." index="2" instance=ExtResource( 14 )]
+
+position = Vector2( 500.665, 927.603 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+
+position = Vector2( 8, -10 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" index="1"]
+
+position = Vector2( 792.986, -133.594 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D" index="2"]
+
+position = Vector2( -102.446, -557.599 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D" index="3"]
+
+position = Vector2( 592.141, -540.862 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" index="4"]
+
+position = Vector2( 1055.5, -320.36 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D" index="5"]
+
+position = Vector2( 1028.84, -119.407 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D" index="6"]
+
+position = Vector2( 1143.67, -111.204 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" index="7"]
+
+position = Vector2( 213.426, -588.354 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" index="8"]
+
+position = Vector2( -395.387, -374.028 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" index="9"]
+
+position = Vector2( -499.022, -333.314 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" index="10"]
+
+position = Vector2( -415.744, -301.854 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" index="11"]
+
+position = Vector2( 1244.55, -342.238 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" index="12"]
+
+position = Vector2( -490.756, -354.997 )
+scale = Vector2( 1, 1.25969 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" index="13"]
+
+position = Vector2( 952.886, 179.313 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" index="14"]
+
+position = Vector2( 372.222, -882.451 )
+shape = SubResource( 5 )
+
+
+[editable path="YSort/Player"]
+[editable path="StaticBody2D"]
