@@ -4,7 +4,7 @@ var player_position_history_offset = 1
 var is_following_player = false
 
 func _ready():
-	pass
+	get_parent().play()
 
 func _process(delta):
 	if is_following_player:
