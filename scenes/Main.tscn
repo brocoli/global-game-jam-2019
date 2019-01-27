@@ -152,8 +152,8 @@ position = Vector2( 2363.81, 934.166 )
 texture = ExtResource( 3 )
 
 [node name="fase 3 nova" type="Sprite" parent="BGs" index="2" groups=[
-"step1",
 "step2",
+"step1",
 ]]
 
 position = Vector2( 3965.17, 934.553 )
@@ -325,8 +325,8 @@ texture = ExtResource( 8 )
 offset = Vector2( -3.05005, -28.683 )
 
 [node name="bush7" type="Sprite" parent="YSort" index="16" groups=[
-"step1",
 "step2",
+"step1",
 ]]
 
 position = Vector2( 1964.17, 910.768 )
@@ -334,8 +334,8 @@ texture = ExtResource( 8 )
 offset = Vector2( -3.05005, -28.683 )
 
 [node name="bush8" type="Sprite" parent="YSort" index="17" groups=[
-"step1",
 "step2",
+"step1",
 ]]
 
 position = Vector2( 2872.82, 892.262 )
@@ -531,6 +531,8 @@ position = Vector2( 372.222, -882.451 )
 shape = SubResource( 5 )
 
 [node name="Darkness" parent="." index="4" instance=ExtResource( 23 )]
+
+visible = false
 
 [node name="TriggerAreas" type="Node" parent="." index="5"]
 
