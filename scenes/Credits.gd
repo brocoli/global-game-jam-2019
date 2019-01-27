@@ -1,6 +1,6 @@
 extends Control
 
-var is_creditos_1 = true
+var level = 0
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -9,9 +9,15 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
-		if is_creditos_1:
+		if level == 0:
 			$creditos1.visible = false
 			$creditos2.visible = true
-			is_creditos_1 = false
+			$creditos3.visible = false
+			level += 1
+		elif level == 1:
+			$creditos1.visible = false
+			$creditos2.visible = false
+			$creditos3.visible = true
+			level += 1
 		else:
 			get_tree().change_scene("res://scenes/Menu.tscn")
