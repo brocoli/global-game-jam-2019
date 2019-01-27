@@ -15,20 +15,22 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "feliz",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "andando_feliz",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": false,
+"name": "feliz",
+"speed": 5.0
 } ]
 
-[node name="PersonagemWalk" type="AnimatedSprite" index="0"]
+[node name="PersonagemWalk" type="AnimatedSprite"]
 
 frames = SubResource( 1 )
 animation = "default"
+offset = Vector2( 22.1453, -55.4281 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 

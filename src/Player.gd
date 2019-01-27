@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 export (bool) var is_inside_well = false
+export (bool) var is_happy = false
 var story_index = 0
 var old_position_index = 0
 var old_position_capacity = 100
@@ -44,7 +45,13 @@ func set_looking_left():
 	$PersonagemWalk.scale.x = -1
 	
 func play_move():
-	$PersonagemWalk.play()
+	if is_happy:
+		$PersonagemWalk.play("andando_feliz")
+	else:
+		$PersonagemWalk.play()
 
 func play_idle():
-	$PersonagemWalk.stop()
+	if is_happy:
+		$PersonagemWalk.play("feliz")
+	else:
+		$PersonagemWalk.stop()

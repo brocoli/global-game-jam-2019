@@ -5,7 +5,7 @@
 [ext_resource path="res://art/menu e créditos/creditos2.png" type="Texture" id=3]
 [ext_resource path="res://art/menu e créditos/creditos3.png" type="Texture" id=4]
 
-[node name="Credits" type="Control" index="0"]
+[node name="Credits" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
