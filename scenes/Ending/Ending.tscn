@@ -2,10 +2,10 @@
 
 [ext_resource path="res://art/ending/1.png" type="Texture" id=1]
 [ext_resource path="res://art/ending/3.png" type="Texture" id=2]
-[ext_resource path="res://art/ending/6.png" type="Texture" id=3]
-[ext_resource path="res://art/ending/2.png" type="Texture" id=4]
+[ext_resource path="res://art/ending/4.png" type="Texture" id=3]
+[ext_resource path="res://art/ending/6.png" type="Texture" id=4]
 [ext_resource path="res://art/ending/5.png" type="Texture" id=5]
-[ext_resource path="res://art/ending/4.png" type="Texture" id=6]
+[ext_resource path="res://art/ending/2.png" type="Texture" id=6]
 [ext_resource path="res://src/Ending.gd" type="Script" id=7]
 [ext_resource path="res://sound/vilarejo-final.ogg" type="AudioStream" id=8]
 
@@ -18,18 +18,18 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ) ],
-"loop": false,
+"loop": true,
 "name": "2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": false,
-"name": "5",
+"name": "3",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
 "loop": false,
-"name": "1",
+"name": "5",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ) ],
@@ -39,11 +39,11 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 6 ) ],
 "loop": false,
-"name": "3",
+"name": "1",
 "speed": 5.0
 } ]
 
-[node name="Ending" type="AnimatedSprite"]
+[node name="Ending" type="AnimatedSprite" index="0"]
 
 position = Vector2( 400, 300 )
 frames = SubResource( 1 )
@@ -54,7 +54,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="Timer" type="Timer" parent="." index="0"]
 
 process_mode = 1
-wait_time = 1.0
+wait_time = 2.0
 one_shot = false
 autostart = false
 
