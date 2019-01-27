@@ -1,6 +1,7 @@
 extends AnimatedSprite
 
 func _ready():
+	$AudioStreamPlayer.seek(8)
 	$Timer.start()
 	yield($Timer, "timeout")
 	$Timer.start()

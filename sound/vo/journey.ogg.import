@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/journey.ogg-07febad84cae68504dcb9612d25f82ad.oggstr"
+
+[deps]
+
+source_file="res://sound/vo/journey.ogg"
+dest_files=[ "res://.import/journey.ogg-07febad84cae68504dcb9612d25f82ad.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
