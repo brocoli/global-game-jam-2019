@@ -999,35 +999,26 @@ texture = ExtResource( 4 )
 [node name="NPCRed" parent="YSort" index="8" instance=ExtResource( 6 )]
 
 position = Vector2( 2185.75, -894.012 )
-playing = false
 offset = Vector2( -0.472534, -119.048 )
 
 [node name="NPCBlue" parent="YSort" index="9" instance=ExtResource( 7 )]
 
 position = Vector2( 2286.27, 2495.3 )
-frame = 0
-playing = false
 offset = Vector2( -2.45081, -56.5723 )
 
 [node name="NPCYellow" parent="YSort" index="10" instance=ExtResource( 8 )]
 
 position = Vector2( 3416.07, -61.2458 )
-frame = 0
-playing = false
 offset = Vector2( 7.34009, -63.7358 )
 
 [node name="NPCJourney" parent="YSort" index="11" instance=ExtResource( 9 )]
 
 position = Vector2( 2911.88, -2709.77 )
-frame = 0
-playing = false
 offset = Vector2( 6.17065, -41.9799 )
 
 [node name="NPCPink" parent="YSort" index="12" instance=ExtResource( 10 )]
 
 position = Vector2( 2817.52, 751.102 )
-frame = 0
-playing = false
 offset = Vector2( -2.04639, -52.9233 )
 
 [node name="Player" parent="YSort" index="13" instance=ExtResource( 11 )]
@@ -1072,8 +1063,6 @@ editor_draw_drag_margin = false
 _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing" ]
 
 [node name="Darkness" parent="." index="3" instance=ExtResource( 12 )]
-
-visible = false
 
 
 [editable path="YSort/Player"]
