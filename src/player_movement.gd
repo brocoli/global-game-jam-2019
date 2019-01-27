@@ -1,6 +1,6 @@
 extends Node
 
-export (int) var movement_speed = 250
+export (int) var movement_speed = 350
 export (bool) var enabled = true
 
 var velocity = Vector2()

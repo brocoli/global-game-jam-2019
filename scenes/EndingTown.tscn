@@ -40,7 +40,7 @@ extents = Vector2( 41.1077, 544.4 )
 custom_solver_bias = 0.0
 extents = Vector2( 3445.92, 29.9417 )
 
-[node name="EndingTown" type="Node" index="0"]
+[node name="EndingTown" type="Node"]
 
 [node name="BGs" type="Node2D" parent="." index="0"]
 

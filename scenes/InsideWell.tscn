@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://art/cenario/fase 5 poço.png" type="Texture" id=1]
 [ext_resource path="res://art/cenario/fase poço 6.png" type="Texture" id=2]
@@ -7,7 +7,8 @@
 [ext_resource path="res://scenes/NPCs/NPCBlue.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/NPCs/NPCYellow.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/NPCs/NPCJourney.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/NPCs/NPCPink.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -971,8 +972,14 @@ offset = Vector2( 7.34009, -63.7358 )
 position = Vector2( 2911.88, -2709.77 )
 offset = Vector2( 6.17065, -41.9799 )
 
-[node name="Player" parent="YSort" index="4" instance=ExtResource( 8 )]
+[node name="NPCPink" parent="YSort" index="4" instance=ExtResource( 8 )]
 
+position = Vector2( 2817.52, 751.102 )
+offset = Vector2( -2.04639, -52.9233 )
+
+[node name="Player" parent="YSort" index="5" instance=ExtResource( 9 )]
+
+editor/display_folded = true
 position = Vector2( 137.268, 176.958 )
 is_inside_well = true
 
