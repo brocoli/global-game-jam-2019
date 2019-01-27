@@ -17,7 +17,7 @@ func _ready():
 	play("4")
 	$Timer.start()
 	yield($Timer, "timeout")
-	play("1")
+	play("5")
 	$Timer.start()
 	yield($Timer, "timeout")
 	$Timer.start()
