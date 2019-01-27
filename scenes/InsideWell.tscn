@@ -203,8 +203,11 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Player" parent="." index="1" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 position = Vector2( 137.268, 176.958 )
+
+[node name="Compass" parent="Player" index="3"]
+
+crushed = true
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="5"]
 
@@ -995,3 +998,4 @@ position = Vector2( 3423.41, -124.982 )
 position = Vector2( 2918.05, -2749.6 )
 
 
+[editable path="Player"]

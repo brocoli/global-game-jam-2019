@@ -14,7 +14,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="NPCJourney" type="AnimatedSprite" index="0"]
+[node name="NPCJourney" type="AnimatedSprite"]
 
 frames = SubResource( 1 )
 animation = "default"
