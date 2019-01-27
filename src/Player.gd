@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+export (bool) var is_inside_well = false
 var story_index = 0
 var old_position_index = 0
 var old_position_capacity = 20
@@ -27,6 +28,8 @@ func get_old_position_y(old_position_history_offset):
 
 func add_player_following():
 	amount_npcs_following += 1
+	if amount_npcs_following >= 4 and is_inside_well:
+		get_tree().change_scene("res://scenes/EndingDoor.tscn")
 	return amount_npcs_following * 4
 
 func is_stopped():

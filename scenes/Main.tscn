@@ -58,61 +58,7 @@ extents = Vector2( 106.759, 119.312 )
 
 [node name="Main" type="Node"]
 
-[node name="ColorRect" type="ColorRect" parent="." index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 3284.0
-margin_top = 210.0
-margin_right = 6374.0
-margin_bottom = 1969.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-color = Color( 0, 0, 0, 1 )
-
-[node name="ColorRect2" type="ColorRect" parent="ColorRect" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -175.0
-margin_top = 64.0
-margin_right = 2915.0
-margin_bottom = 1823.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-color = Color( 0, 0, 0, 0.470588 )
-
-[node name="ColorRect3" type="ColorRect" parent="ColorRect/ColorRect2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -196.0
-margin_top = 9.0
-margin_right = 2894.0
-margin_bottom = 1768.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-color = Color( 0, 0, 0, 0.470588 )
-
-[node name="BGs" type="Node2D" parent="." index="1"]
+[node name="BGs" type="Node2D" parent="." index="0"]
 
 [node name="Town" parent="BGs" index="0" groups=[
 "step1",
@@ -144,15 +90,16 @@ visible = false
 position = Vector2( 2130.12, 934.123 )
 texture = ExtResource( 5 )
 
-[node name="YSort" type="YSort" parent="." index="2"]
+[node name="YSort" type="YSort" parent="." index="1"]
 
 editor/display_folded = true
 sort_enabled = true
 
 [node name="Player" parent="YSort" index="0" instance=ExtResource( 6 )]
 
-position = Vector2( 274.399, 591.644 )
+position = Vector2( 639.726, 525.948 )
 _sections_unfolded = [ "Collision", "Pause", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
+is_inside_well = false
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player" index="5"]
 
@@ -366,7 +313,7 @@ position = Vector2( 1089, 432 )
 texture = ExtResource( 16 )
 offset = Vector2( -2.91455, -127.261 )
 
-[node name="StaticBody2D" parent="." index="3" instance=ExtResource( 17 )]
+[node name="StaticBody2D" parent="." index="2" instance=ExtResource( 17 )]
 
 editor/display_folded = true
 visible = false
@@ -459,7 +406,7 @@ shape = SubResource( 5 )
 position = Vector2( 372.222, -882.451 )
 shape = SubResource( 5 )
 
-[node name="Darkness" type="Sprite" parent="." index="4"]
+[node name="Darkness" type="Sprite" parent="." index="3"]
 
 visible = false
 light_mask = 2
@@ -467,7 +414,7 @@ scale = Vector2( 1000, 1000 )
 texture = ExtResource( 18 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="TriggerAreas" type="Node" parent="." index="5"]
+[node name="TriggerAreas" type="Node" parent="." index="4"]
 
 [node name="Trigger1" type="Area2D" parent="TriggerAreas" index="0"]
 

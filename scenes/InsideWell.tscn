@@ -134,7 +134,7 @@ extents = Vector2( 58.749, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 355.281 )
 
-[node name="InsideWell" type="Node2D" index="0"]
+[node name="InsideWell" type="Node2D"]
 
 position = Vector2( -372.105, 744.211 )
 
@@ -974,6 +974,7 @@ offset = Vector2( 6.17065, -41.9799 )
 [node name="Player" parent="YSort" index="4" instance=ExtResource( 8 )]
 
 position = Vector2( 137.268, 176.958 )
+is_inside_well = true
 
 [node name="Compass" parent="YSort/Player" index="3"]
 

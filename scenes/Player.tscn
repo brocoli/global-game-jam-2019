@@ -34,6 +34,7 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
+is_inside_well = false
 
 [node name="Shadow" type="ColorRect" parent="." index="0"]
 
@@ -102,6 +103,7 @@ _sections_unfolded = [ "Transform" ]
 
 script = ExtResource( 6 )
 movement_speed = 1200
+enabled = true
 
 [node name="Compass" parent="." index="3" instance=ExtResource( 7 )]
 

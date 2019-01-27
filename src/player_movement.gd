@@ -1,6 +1,7 @@
 extends Node
 
 export (int) var movement_speed = 250
+export (bool) var enabled = true
 
 var velocity = Vector2()
 
@@ -25,5 +26,12 @@ func get_input():
 		get_parent().play_move()
 
 func _physics_process(delta):
-	get_input()
-	get_parent().move_and_slide(velocity)
+	if enabled:
+		get_input()
+		get_parent().move_and_slide(velocity)
+
+func enable():
+	enabled = true
+
+func set_player_moving():
+	velocity = Vector2(1,1)

@@ -1,0 +1,94 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/EndingDoor.gd" type="Script" id=1]
+[ext_resource path="res://art/cenario/fase poço porta.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/NPCs/NPCBlue.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/NPCs/NPCJourney.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/NPCs/NPCRed.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/NPCs/NPCYellow.tscn" type="PackedScene" id=7]
+
+[node name="EndingDoor" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="fase poço porta" type="Sprite" parent="." index="0"]
+
+position = Vector2( 1052.5, 853 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="YSort" type="YSort" parent="." index="1"]
+
+sort_enabled = true
+
+[node name="Player" parent="YSort" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 221.523, 245.082 )
+
+[node name="Movement" parent="YSort/Player" index="2"]
+
+enabled = false
+
+[node name="Camera2D" type="Camera2D" parent="YSort/Player" index="6"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = 0
+limit_top = 0
+limit_right = 2105
+limit_bottom = 1706
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.1
+drag_margin_top = 0.1
+drag_margin_right = 0.05
+drag_margin_bottom = 0.05
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Drag Margin", "Limit", "Offset", "Smoothing" ]
+
+[node name="NPCBlue" parent="YSort" index="1" instance=ExtResource( 4 )]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="NPCJourney" parent="YSort" index="2" instance=ExtResource( 5 )]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="NPCRed" parent="YSort" index="3" instance=ExtResource( 6 )]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="NPCYellow" parent="YSort" index="4" instance=ExtResource( 7 )]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="PogBlackout" type="ColorRect" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -519.0
+margin_top = -495.0
+margin_right = 4204.0
+margin_bottom = 3056.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.0666667, 0.109804, 0.129412, 1 )
+
+
+[editable path="YSort/Player"]
