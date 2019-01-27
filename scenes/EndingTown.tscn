@@ -20,6 +20,7 @@
 [ext_resource path="res://art/personagens extra/journey 1.png" type="Texture" id=18]
 [ext_resource path="res://scenes/StaticBody2D.tscn" type="PackedScene" id=19]
 [ext_resource path="res://src/EndingFade.gd" type="Script" id=20]
+[ext_resource path="res://sound/vilarejo-final.ogg" type="AudioStream" id=21]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -69,6 +70,7 @@ sort_enabled = true
 editor/display_folded = true
 position = Vector2( 690.063, 387.214 )
 _sections_unfolded = [ "Collision", "Pause", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
+is_happy = false
 
 [node name="Compass" parent="YSort/Player" index="3"]
 
@@ -458,6 +460,15 @@ playback_speed = 1.0
 playback/active = false
 playback/repeat = false
 playback/speed = 1.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 21 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 
 [editable path="YSort/Player"]

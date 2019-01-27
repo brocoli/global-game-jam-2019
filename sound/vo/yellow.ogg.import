@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/yellow.ogg-21fe1a2468c9014fe65e4610809d95b9.oggstr"
+
+[deps]
+
+source_file="res://sound/vo/yellow.ogg"
+dest_files=[ "res://.import/yellow.ogg-21fe1a2468c9014fe65e4610809d95b9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

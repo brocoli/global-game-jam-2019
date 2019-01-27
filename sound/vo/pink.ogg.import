@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pink.ogg-cd4ba7e6438e5b049eb6e8c5dc2a89c5.oggstr"
+
+[deps]
+
+source_file="res://sound/vo/pink.ogg"
+dest_files=[ "res://.import/pink.ogg-cd4ba7e6438e5b049eb6e8c5dc2a89c5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

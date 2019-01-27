@@ -10,3 +10,9 @@ func _on_PlayButton_pressed():
 
 func _on_CreditsButton_pressed():
 	get_tree().change_scene("res://scenes/Credits.tscn")
+
+func _process(delta):
+	if Input.is_action_just_pressed("ui_up"):
+		$Dinger.play()
+	if Input.is_action_just_pressed("ui_down"):
+		$Dinger.play()
