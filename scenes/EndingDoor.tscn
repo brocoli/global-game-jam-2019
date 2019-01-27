@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/EndingDoor.gd" type="Script" id=1]
 [ext_resource path="res://art/cenario/fase poço porta.png" type="Texture" id=2]
@@ -7,6 +7,21 @@
 [ext_resource path="res://scenes/NPCs/NPCJourney.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/NPCs/NPCRed.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/NPCs/NPCYellow.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 1109, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 960 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 268.879, 224.497 )
 
 [node name="EndingDoor" type="Node2D" index="0"]
 
@@ -29,6 +44,11 @@ position = Vector2( 221.523, 245.082 )
 [node name="Movement" parent="YSort/Player" index="2"]
 
 enabled = false
+
+[node name="Compass" parent="YSort/Player" index="3"]
+
+broken = false
+crushed = true
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player" index="6"]
 
@@ -58,18 +78,26 @@ _sections_unfolded = [ "Drag Margin", "Limit", "Offset", "Smoothing" ]
 
 [node name="NPCBlue" parent="YSort" index="1" instance=ExtResource( 4 )]
 
+position = Vector2( 4.12462, 55.3932 )
+offset = Vector2( -4.12462, -55.3932 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="NPCJourney" parent="YSort" index="2" instance=ExtResource( 5 )]
 
+position = Vector2( -5.88912, 44.0619 )
+offset = Vector2( 5.88912, -44.0619 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="NPCRed" parent="YSort" index="3" instance=ExtResource( 6 )]
 
+position = Vector2( -0.557144, 121.502 )
+offset = Vector2( 0.557144, -121.502 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="NPCYellow" parent="YSort" index="4" instance=ExtResource( 7 )]
 
+position = Vector2( -7.67487, 64.5597 )
+offset = Vector2( 7.67487, -64.5597 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="PogBlackout" type="ColorRect" parent="." index="2"]
@@ -89,6 +117,83 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 0.0666667, 0.109804, 0.129412, 1 )
+
+[node name="Walls" type="Node2D" parent="." index="3"]
+
+[node name="Wall1" type="StaticBody2D" parent="Walls" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall1" index="0"]
+
+position = Vector2( 1040, 0 )
+shape = SubResource( 1 )
+
+[node name="Wall2" type="StaticBody2D" parent="Walls" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall2" index="0"]
+
+position = Vector2( 1070, 1710 )
+shape = SubResource( 1 )
+
+[node name="Wall3" type="StaticBody2D" parent="Walls" index="2"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall3" index="0"]
+
+position = Vector2( 0, 880 )
+shape = SubResource( 2 )
+
+[node name="Wall4" type="StaticBody2D" parent="Walls" index="3"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall4" index="0"]
+
+position = Vector2( 2102.37, 867.386 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls" index="4"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D" index="0"]
+
+position = Vector2( 1027.57, 819.237 )
+shape = SubResource( 3 )
 
 
 [editable path="YSort/Player"]
