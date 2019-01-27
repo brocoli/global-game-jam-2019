@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://art/cenario/cenario 1 tamanho certo.png" type="Texture" id=2]
@@ -19,8 +19,8 @@
 [ext_resource path="res://art/personagens extra/pink.png" type="Texture" id=17]
 [ext_resource path="res://art/personagens extra/journey 1.png" type="Texture" id=18]
 [ext_resource path="res://scenes/StaticBody2D.tscn" type="PackedScene" id=19]
-[ext_resource path="res://src/EndingFade.gd" type="Script" id=20]
-[ext_resource path="res://sound/vilarejo-final.ogg" type="AudioStream" id=21]
+[ext_resource path="res://sound/vilarejo-final.ogg" type="AudioStream" id=20]
+[ext_resource path="res://src/EndingFade.gd" type="Script" id=21]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -47,7 +47,7 @@ extents = Vector2( 41.1077, 544.4 )
 custom_solver_bias = 0.0
 extents = Vector2( 3445.92, 29.9417 )
 
-[node name="EndingTown" type="Node"]
+[node name="EndingTown" type="Node" index="0"]
 
 [node name="BGs" type="Node2D" parent="." index="0"]
 
@@ -62,7 +62,6 @@ texture = ExtResource( 2 )
 
 [node name="YSort" type="YSort" parent="." index="1"]
 
-editor/display_folded = true
 sort_enabled = true
 
 [node name="Player" parent="YSort" index="0" instance=ExtResource( 3 )]
@@ -70,7 +69,11 @@ sort_enabled = true
 editor/display_folded = true
 position = Vector2( 690.063, 387.214 )
 _sections_unfolded = [ "Collision", "Pause", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
-is_happy = false
+is_happy = true
+
+[node name="PersonagemWalk" parent="YSort/Player" index="1"]
+
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Compass" parent="YSort/Player" index="3"]
 
@@ -431,7 +434,16 @@ shape = SubResource( 5 )
 position = Vector2( 372.222, -882.451 )
 shape = SubResource( 5 )
 
-[node name="FGs" type="Node2D" parent="." index="3"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 20 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="FGs" type="Node2D" parent="." index="4"]
 
 [node name="ColorRect" type="ColorRect" parent="FGs" index="0"]
 
@@ -450,7 +462,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 0, 0, 0, 0 )
-script = ExtResource( 20 )
+script = ExtResource( 21 )
 
 [node name="Tween" type="Tween" parent="FGs/ColorRect" index="0"]
 
@@ -460,15 +472,6 @@ playback_speed = 1.0
 playback/active = false
 playback/repeat = false
 playback/speed = 1.0
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
-
-stream = ExtResource( 21 )
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = true
-mix_target = 0
-bus = "Master"
 
 
 [editable path="YSort/Player"]

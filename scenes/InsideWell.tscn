@@ -139,7 +139,7 @@ extents = Vector2( 58.749, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 355.281 )
 
-[node name="InsideWell" type="Node2D" index="0"]
+[node name="InsideWell" type="Node2D"]
 
 position = Vector2( -372.105, 744.211 )
 
