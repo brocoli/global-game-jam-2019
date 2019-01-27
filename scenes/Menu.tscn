@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/Menu.gd" type="Script" id=1]
 [ext_resource path="res://art/menu e créditos/menu.png" type="Texture" id=2]
@@ -9,8 +9,9 @@
 [ext_resource path="res://art/menu e créditos/botão 2 pressionado.png" type="Texture" id=7]
 [ext_resource path="res://art/menu e créditos/botão claro 2.png" type="Texture" id=8]
 [ext_resource path="res://sound/crash.ogg" type="AudioStream" id=9]
+[ext_resource path="res://sound/ding.ogg" type="AudioStream" id=10]
 
-[node name="Menu" type="Control" index="0"]
+[node name="Menu" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -97,6 +98,15 @@ stream = ExtResource( 9 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="Dinger" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 10 )
+volume_db = -0.1
+pitch_scale = 1.0
+autoplay = false
 mix_target = 0
 bus = "Master"
 

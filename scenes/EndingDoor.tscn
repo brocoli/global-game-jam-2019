@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scenes/EndingDoor.gd" type="Script" id=1]
 [ext_resource path="res://art/cenario/fase poço porta.png" type="Texture" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://scenes/NPCs/NPCYellow.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/NPCs/NPCPink.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/DoorTrigger.gd" type="Script" id=9]
+[ext_resource path="res://sound/bong.ogg" type="AudioStream" id=10]
+[ext_resource path="res://sound/fufufufu.ogg" type="AudioStream" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -225,6 +227,24 @@ script = ExtResource( 9 )
 
 position = Vector2( 1027, 1101.78 )
 shape = SubResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 10 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 11 )
+volume_db = 0.0
+pitch_scale = 0.58
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 [connection signal="body_entered" from="DoorTrigger" to="DoorTrigger" method="_on_DoorTrigger_body_entered"]
 
