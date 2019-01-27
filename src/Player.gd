@@ -29,6 +29,7 @@ func get_old_position_y(old_position_history_offset):
 
 func add_player_following():
 	amount_npcs_following += 1
+	$Light2D.scale += Vector2(0.1,0.1)
 	if amount_npcs_following >= number_of_npcs and is_inside_well:
 		get_tree().change_scene("res://scenes/EndingDoor.tscn")
 	return amount_npcs_following * 18

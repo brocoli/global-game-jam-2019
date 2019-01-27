@@ -22,7 +22,7 @@
 [ext_resource path="res://art/personagens_cidade/chunky_cheesecake.png" type="Texture" id=20]
 [ext_resource path="res://art/personagens_cidade/old_cheesecake.png" type="Texture" id=21]
 [ext_resource path="res://scenes/StaticBody2D.tscn" type="PackedScene" id=22]
-[ext_resource path="res://art/cenario/black-screen.png" type="Texture" id=23]
+[ext_resource path="res://scenes/Darkness.tscn" type="PackedScene" id=23]
 [ext_resource path="res://src/Trigger1.gd" type="Script" id=24]
 [ext_resource path="res://src/Trigger2.gd" type="Script" id=25]
 
@@ -152,8 +152,8 @@ position = Vector2( 2363.81, 934.166 )
 texture = ExtResource( 3 )
 
 [node name="fase 3 nova" type="Sprite" parent="BGs" index="2" groups=[
-"step2",
 "step1",
+"step2",
 ]]
 
 position = Vector2( 3965.17, 934.553 )
@@ -169,10 +169,12 @@ texture = ExtResource( 5 )
 
 [node name="YSort" type="YSort" parent="." index="2"]
 
+editor/display_folded = true
 sort_enabled = true
 
 [node name="Player" parent="YSort" index="0" instance=ExtResource( 6 )]
 
+editor/display_folded = true
 position = Vector2( 639.726, 524.948 )
 _sections_unfolded = [ "Collision", "Pause", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
 
@@ -323,8 +325,8 @@ texture = ExtResource( 8 )
 offset = Vector2( -3.05005, -28.683 )
 
 [node name="bush7" type="Sprite" parent="YSort" index="16" groups=[
-"step2",
 "step1",
+"step2",
 ]]
 
 position = Vector2( 1964.17, 910.768 )
@@ -332,8 +334,8 @@ texture = ExtResource( 8 )
 offset = Vector2( -3.05005, -28.683 )
 
 [node name="bush8" type="Sprite" parent="YSort" index="17" groups=[
-"step2",
 "step1",
+"step2",
 ]]
 
 position = Vector2( 2872.82, 892.262 )
@@ -528,13 +530,7 @@ shape = SubResource( 5 )
 position = Vector2( 372.222, -882.451 )
 shape = SubResource( 5 )
 
-[node name="Darkness" type="Sprite" parent="." index="4"]
-
-visible = false
-light_mask = 2
-scale = Vector2( 1000, 1000 )
-texture = ExtResource( 23 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+[node name="Darkness" parent="." index="4" instance=ExtResource( 23 )]
 
 [node name="TriggerAreas" type="Node" parent="." index="5"]
 
