@@ -20,6 +20,7 @@ func get_player():
 func _on_Area2D_body_entered(body):
 	if not is_following_player and body.is_in_group("player"):
 		follow_the_player()
+		get_parent().get_node("AudioStreamPlayer").play()
 
 func follow_the_player():
 	if not is_following_player:
