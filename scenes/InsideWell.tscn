@@ -973,8 +973,12 @@ offset = Vector2( 6.17065, -41.9799 )
 
 [node name="Player" parent="YSort" index="4" instance=ExtResource( 8 )]
 
-editor/display_folded = true
 position = Vector2( 137.268, 176.958 )
+
+[node name="Compass" parent="YSort/Player" index="3"]
+
+broken = false
+crushed = true
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player" index="5"]
 
@@ -1003,3 +1007,4 @@ editor_draw_drag_margin = false
 _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing" ]
 
 
+[editable path="YSort/Player"]
