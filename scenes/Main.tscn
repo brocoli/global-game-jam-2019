@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://art/cenario/cenario 1 tamanho certo.png" type="Texture" id=2]
@@ -25,6 +25,8 @@
 [ext_resource path="res://scenes/Darkness.tscn" type="PackedScene" id=23]
 [ext_resource path="res://src/Trigger1.gd" type="Script" id=24]
 [ext_resource path="res://src/Trigger2.gd" type="Script" id=25]
+[ext_resource path="res://sound/vilarejo-inicio.ogg" type="AudioStream" id=26]
+[ext_resource path="res://src/AudioMain.gd" type="Script" id=27]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -61,7 +63,7 @@ extents = Vector2( 567.724, 210.225 )
 custom_solver_bias = 0.0
 extents = Vector2( 106.759, 119.312 )
 
-[node name="Main" type="Node"]
+[node name="Main" type="Node" index="0"]
 
 [node name="ColorRect" type="ColorRect" parent="." index="0"]
 
@@ -169,6 +171,7 @@ texture = ExtResource( 5 )
 
 [node name="YSort" type="YSort" parent="." index="2"]
 
+editor/display_folded = true
 sort_enabled = true
 
 [node name="Player" parent="YSort" index="0" instance=ExtResource( 6 )]
@@ -176,7 +179,6 @@ sort_enabled = true
 editor/display_folded = true
 position = Vector2( 639.726, 524.948 )
 _sections_unfolded = [ "Collision", "Pause", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
-is_happy = false
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player" index="5"]
 
@@ -568,6 +570,16 @@ script = ExtResource( 25 )
 
 position = Vector2( 1168.55, 958.626 )
 shape = SubResource( 7 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 26 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+script = ExtResource( 27 )
 
 [connection signal="body_entered" from="TriggerAreas/Trigger1" to="TriggerAreas/Trigger1" method="_on_Trigger1_body_entered"]
 

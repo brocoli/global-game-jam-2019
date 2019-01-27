@@ -46,7 +46,7 @@ extents = Vector2( 41.1077, 544.4 )
 custom_solver_bias = 0.0
 extents = Vector2( 3445.92, 29.9417 )
 
-[node name="EndingTown" type="Node" index="0"]
+[node name="EndingTown" type="Node"]
 
 [node name="BGs" type="Node2D" parent="." index="0"]
 
@@ -65,6 +65,7 @@ sort_enabled = true
 
 position = Vector2( 690.063, 387.214 )
 _sections_unfolded = [ "Collision", "Pause", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
+is_happy = false
 
 [node name="Compass" parent="YSort/Player" index="3"]
 

@@ -2,12 +2,12 @@
 
 [ext_resource path="res://scenes/EndingDoor.gd" type="Script" id=1]
 [ext_resource path="res://art/cenario/fase poço porta.png" type="Texture" id=2]
-[ext_resource path="res://scenes/NPCs/NPCBlue.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/NPCs/NPCJourney.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/NPCs/NPCRed.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/NPCs/NPCYellow.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/NPCs/NPCPink.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/NPCs/NPCBlue.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/NPCs/NPCJourney.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/NPCs/NPCRed.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/NPCs/NPCYellow.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/NPCs/NPCPink.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/DoorTrigger.gd" type="Script" id=9]
 [ext_resource path="res://sound/bong.ogg" type="AudioStream" id=10]
 [ext_resource path="res://sound/fufufufu.ogg" type="AudioStream" id=11]
@@ -32,7 +32,7 @@ extents = Vector2( 268.879, 224.497 )
 custom_solver_bias = 0.0
 extents = Vector2( 74.2394, 49.2681 )
 
-[node name="EndingDoor" type="Node2D" index="0"]
+[node name="EndingDoor" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -46,38 +46,20 @@ _sections_unfolded = [ "Offset", "Transform" ]
 
 sort_enabled = true
 
-[node name="NPCBlue" parent="YSort" index="0" instance=ExtResource( 3 )]
+[node name="Player" parent="YSort" index="0" instance=ExtResource( 3 )]
 
-position = Vector2( 4.12462, 55.3932 )
-offset = Vector2( -4.12462, -55.3932 )
-_sections_unfolded = [ "Transform" ]
+editor/display_folded = true
+position = Vector2( 221.523, 245.082 )
+is_happy = false
 
-[node name="NPCJourney" parent="YSort" index="1" instance=ExtResource( 4 )]
+[node name="Movement" parent="YSort/Player" index="2"]
 
-position = Vector2( -5.88912, 44.0619 )
-offset = Vector2( 5.88912, -44.0619 )
-_sections_unfolded = [ "Transform" ]
+enabled = false
 
-[node name="NPCRed" parent="YSort" index="2" instance=ExtResource( 5 )]
+[node name="Compass" parent="YSort/Player" index="3"]
 
-position = Vector2( -0.557144, 121.502 )
-offset = Vector2( 0.557144, -121.502 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="NPCYellow" parent="YSort" index="3" instance=ExtResource( 6 )]
-
-position = Vector2( -7.67487, 64.5597 )
-offset = Vector2( 7.67487, -64.5597 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="NPCPink" parent="YSort" index="4" instance=ExtResource( 7 )]
-
-position = Vector2( 1.50531, 52.2712 )
-offset = Vector2( -1.50531, -52.2712 )
-
-[node name="Player" parent="YSort" index="5" instance=ExtResource( 8 )]
-
-position = Vector2( 317.573, 167.613 )
+broken = false
+crushed = true
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player" index="6"]
 
@@ -93,7 +75,7 @@ limit_smoothed = false
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_enabled = true
-smoothing_speed = 6.0
+smoothing_speed = 5.0
 offset_v = 0.0
 offset_h = 0.0
 drag_margin_left = 0.1
@@ -104,6 +86,35 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Drag Margin", "Limit", "Offset", "Smoothing" ]
+
+[node name="NPCBlue" parent="YSort" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 4.12462, 55.3932 )
+offset = Vector2( -4.12462, -55.3932 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="NPCJourney" parent="YSort" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( -5.88912, 44.0619 )
+offset = Vector2( 5.88912, -44.0619 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="NPCRed" parent="YSort" index="3" instance=ExtResource( 6 )]
+
+position = Vector2( -0.557144, 121.502 )
+offset = Vector2( 0.557144, -121.502 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="NPCYellow" parent="YSort" index="4" instance=ExtResource( 7 )]
+
+position = Vector2( -7.67487, 64.5597 )
+offset = Vector2( 7.67487, -64.5597 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="NPCPink" parent="YSort" index="5" instance=ExtResource( 8 )]
+
+position = Vector2( 1.50531, 52.2712 )
+offset = Vector2( -1.50531, -52.2712 )
 
 [node name="PogBlackout" type="ColorRect" parent="." index="2"]
 

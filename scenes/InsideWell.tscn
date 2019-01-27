@@ -1027,6 +1027,7 @@ offset = Vector2( -2.04639, -52.9233 )
 editor/display_folded = true
 position = Vector2( 137.268, 176.958 )
 is_inside_well = true
+is_happy = false
 
 [node name="Compass" parent="YSort/Player" index="3"]
 
