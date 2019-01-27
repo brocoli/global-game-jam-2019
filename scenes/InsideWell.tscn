@@ -139,7 +139,7 @@ extents = Vector2( 58.749, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 355.281 )
 
-[node name="InsideWell" type="Node2D"]
+[node name="InsideWell" type="Node2D" index="0"]
 
 position = Vector2( -372.105, 744.211 )
 
@@ -971,63 +971,96 @@ position = Vector2( 1671.82, 145.975 )
 texture = ExtResource( 4 )
 offset = Vector2( -0.00012207, -49.8615 )
 
-[node name="boxes7" type="Sprite" parent="YSort" index="3"]
+[node name="boxes8" type="Sprite" parent="YSort" index="3"]
+
+position = Vector2( 2190.39, 390.279 )
+texture = ExtResource( 4 )
+offset = Vector2( -0.00012207, -49.8615 )
+
+[node name="boxes9" type="Sprite" parent="YSort" index="4"]
+
+position = Vector2( 2183.17, 427.281 )
+texture = ExtResource( 4 )
+offset = Vector2( -0.00012207, -49.8615 )
+
+[node name="boxes10" type="Sprite" parent="YSort" index="5"]
+
+position = Vector2( 2412.4, 393.889 )
+texture = ExtResource( 4 )
+offset = Vector2( -0.00012207, -49.8615 )
+
+[node name="boxes11" type="Sprite" parent="YSort" index="6"]
+
+position = Vector2( 2408.79, 425.476 )
+texture = ExtResource( 4 )
+offset = Vector2( -0.00012207, -49.8615 )
+
+[node name="boxes12" type="Sprite" parent="YSort" index="7"]
+
+position = Vector2( 2530.72, -563.272 )
+texture = ExtResource( 4 )
+offset = Vector2( -0.00012207, -49.8615 )
+
+[node name="boxes7" type="Sprite" parent="YSort" index="8"]
 
 position = Vector2( 1627.5, 118.274 )
 texture = ExtResource( 4 )
 offset = Vector2( -0.00012207, -52.0776 )
 
-[node name="boxes" type="Sprite" parent="YSort" index="4"]
+[node name="boxes" type="Sprite" parent="YSort" index="9"]
 
 position = Vector2( 32.5452, 103.089 )
 texture = ExtResource( 4 )
 
-[node name="boxes2" type="Sprite" parent="YSort" index="5"]
+[node name="boxes2" type="Sprite" parent="YSort" index="10"]
 
 position = Vector2( 55.8722, 164.906 )
 texture = ExtResource( 4 )
 
-[node name="boxes3" type="Sprite" parent="YSort" index="6"]
+[node name="boxes3" type="Sprite" parent="YSort" index="11"]
 
 position = Vector2( 34.8779, 210.394 )
 texture = ExtResource( 4 )
 
-[node name="boxes4" type="Sprite" parent="YSort" index="7"]
+[node name="boxes4" type="Sprite" parent="YSort" index="12"]
 
 position = Vector2( -16.4415, 146.244 )
 texture = ExtResource( 4 )
 
-[node name="NPCRed" parent="YSort" index="8" instance=ExtResource( 6 )]
+[node name="NPCRed" parent="YSort" index="13" instance=ExtResource( 6 )]
 
 position = Vector2( 2185.75, -894.012 )
 offset = Vector2( -0.472534, -119.048 )
 
-[node name="NPCBlue" parent="YSort" index="9" instance=ExtResource( 7 )]
+[node name="NPCBlue" parent="YSort" index="14" instance=ExtResource( 7 )]
 
 position = Vector2( 2286.27, 2495.3 )
 offset = Vector2( -2.45081, -56.5723 )
 
-[node name="NPCYellow" parent="YSort" index="10" instance=ExtResource( 8 )]
+[node name="NPCYellow" parent="YSort" index="15" instance=ExtResource( 8 )]
 
 position = Vector2( 3416.07, -61.2458 )
 offset = Vector2( 7.34009, -63.7358 )
 
-[node name="NPCJourney" parent="YSort" index="11" instance=ExtResource( 9 )]
+[node name="NPCJourney" parent="YSort" index="16" instance=ExtResource( 9 )]
 
 position = Vector2( 2911.88, -2709.77 )
 offset = Vector2( 6.17065, -41.9799 )
 
-[node name="NPCPink" parent="YSort" index="12" instance=ExtResource( 10 )]
+[node name="NPCPink" parent="YSort" index="17" instance=ExtResource( 10 )]
 
 position = Vector2( 2817.52, 751.102 )
 offset = Vector2( -2.04639, -52.9233 )
 
-[node name="Player" parent="YSort" index="13" instance=ExtResource( 11 )]
+[node name="Player" parent="YSort" index="18" instance=ExtResource( 11 )]
 
 editor/display_folded = true
 position = Vector2( 137.268, 176.958 )
 is_inside_well = true
-is_happy = false
+
+[node name="PersonagemWalk" parent="YSort/Player" index="1"]
+
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Compass" parent="YSort/Player" index="3"]
 
@@ -1065,6 +1098,8 @@ editor_draw_drag_margin = false
 _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing" ]
 
 [node name="Darkness" parent="." index="3" instance=ExtResource( 12 )]
+
+visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="4"]
 
