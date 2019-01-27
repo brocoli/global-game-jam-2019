@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vilarejo-final.ogg-de92cdb4448b03682dc7ac786cf2ac03.oggstr"
+
+[deps]
+
+source_file="res://sound/vilarejo-final.ogg"
+dest_files=[ "res://.import/vilarejo-final.ogg-de92cdb4448b03682dc7ac786cf2ac03.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
